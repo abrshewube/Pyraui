@@ -13,7 +13,8 @@ defmodule Pyraui.MixProject do
       compilers: [:phoenix_live_view] ++ Mix.compilers(),
       listeners: [Phoenix.CodeReloader],
       description: description(),
-      package: package()
+      package: package(),
+      docs: docs()
     ]
   end
 
@@ -49,7 +50,7 @@ defmodule Pyraui.MixProject do
       {:lazy_html, ">= 0.1.0", only: :test},
       {:esbuild, "~> 0.10", runtime: Mix.env() == :dev},
       {:tailwind, "~> 0.3", runtime: Mix.env() == :dev},
-      {:heroicons, "~> 0.5", runtime: false},
+      {:heroicons, "~> 0.5"},
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
       {:jason, "~> 1.2"},
@@ -88,6 +89,39 @@ defmodule Pyraui.MixProject do
     [
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/AbrhamWube/ashui"}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "readme",
+      extras: [
+        "README.md",
+        "LICENSE",
+        "guides/overview.md",
+        "guides/getting-started.md",
+        "guides/components/alert.md",
+        "guides/components/theme-switch.md",
+        "guides/components/live-chat.md",
+        "guides/components/table.md",
+        "guides/components/modal.md",
+        "guides/components/datepicker.md"
+      ],
+      groups_for_extras: [
+        "Core Guides": [
+          "guides/overview.md",
+          "guides/getting-started.md"
+        ],
+        "Component Spotlights": [
+          "guides/components/alert.md",
+          "guides/components/theme-switch.md",
+          "guides/components/live-chat.md",
+          "guides/components/table.md",
+          "guides/components/modal.md",
+          "guides/components/datepicker.md"
+        ],
+        "Reference": ["LICENSE"]
+      ]
     ]
   end
 end
