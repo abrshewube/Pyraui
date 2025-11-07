@@ -1,4 +1,4 @@
-# AshUI – Phoenix LiveView UI Library
+# PyraUI – Phoenix LiveView UI Library
 
 A modular, reusable UI library for Phoenix LiveView applications, enabling developers to rapidly build interactive, responsive, and consistent interfaces.
 
@@ -17,12 +17,12 @@ Add to your `mix.exs`:
 ```elixir
 def deps do
   [
-    {:ashui, path: "../ashui"}  # or {:ashui, git: "..."}
+    {:pyraui, path: "../pyraui"}  # or {:pyraui, git: "..."}
   ]
 end
 ```
 
-Then import in your `AshuiWeb` module or use `use AshuiWeb, :html` in your templates.
+Then import in your `PyrauiWeb` module or use `use PyrauiWeb, :html` in your templates.
 
 ## Components
 

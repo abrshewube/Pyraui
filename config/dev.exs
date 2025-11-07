@@ -6,7 +6,7 @@ import Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we can use it
 # to bundle .js and .css sources.
-config :ashui, AshuiWeb.Endpoint,
+config :pyraui, PyrauiWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: String.to_integer(System.get_env("PORT") || "4000")],
@@ -15,8 +15,8 @@ config :ashui, AshuiWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "u4uT9N/37UwW8ER41RNbqMRLHfRLAI0mwRCRhCzWY/+Uhbyz2LhbqIbL+Zx4Sqcd",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:ashui, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:ashui, ~w(--watch)]}
+    esbuild: {Esbuild, :install_and_run, [:pyraui, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:pyraui, ~w(--watch)]}
   ]
 
 # ## SSL Support
@@ -43,17 +43,17 @@ config :ashui, AshuiWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :ashui, AshuiWeb.Endpoint,
+config :pyraui, PyrauiWeb.Endpoint,
   live_reload: [
     web_console_logger: true,
     patterns: [
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"lib/ashui_web/(?:controllers|live|components|router)/?.*\.(ex|heex)$"
+      ~r"lib/pyraui_web/(?:controllers|live|components|router)/?.*\.(ex|heex)$"
     ]
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :ashui, dev_routes: true
+config :pyraui, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :default_formatter, format: "[$level] $message\n"

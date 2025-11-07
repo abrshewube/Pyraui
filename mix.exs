@@ -1,9 +1,9 @@
-defmodule Ashui.MixProject do
+defmodule Pyraui.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :ashui,
+      app: :pyraui,
       version: "0.1.0",
       elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -20,7 +20,7 @@ defmodule Ashui.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Ashui.Application, []},
+      mod: {Pyraui.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -72,10 +72,10 @@ defmodule Ashui.MixProject do
     [
       setup: ["deps.get", "assets.setup", "assets.build"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["compile", "tailwind ashui", "esbuild ashui"],
+      "assets.build": ["compile", "tailwind pyraui", "esbuild pyraui"],
       "assets.deploy": [
-        "tailwind ashui --minify",
-        "esbuild ashui --minify",
+        "tailwind pyraui --minify",
+        "esbuild pyraui --minify",
         "phx.digest"
       ],
       precommit: ["compile --warning-as-errors", "deps.unlock --unused", "format", "test"]

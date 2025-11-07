@@ -2,7 +2,7 @@ import Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :ashui, AshuiWeb.Endpoint,
+config :pyraui, PyrauiWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "6uQf+TR5NpzRex05pEMLkBgs79eVN30Hf/BNK69HukdVYWW0d4aXkF77D0DFp4kD",
   server: false

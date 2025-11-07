@@ -3,6 +3,7 @@ export const RichTextEditorHook = {
   mounted() {
     this.editor = this.el
     this.hiddenInput = document.getElementById(`${this.el.id}-input`)
+    this.imageInput = document.getElementById(`${this.el.id}-image-input`)
     this.toolbar = this.el.previousElementSibling
     this.placeholder = this.el.dataset.placeholder || "Start typing..."
 
@@ -113,9 +114,38 @@ export const RichTextEditorHook = {
           const value = button.dataset.value || button.getAttribute("phx-value-value")
 
           if (command) {
-            this.executeCommand(command, value)
+            if (command === "insertImage") {
+              // If a value isn't provided, attempt file picker; else prompt for URL
+              if (this.imageInput) {
+                this.imageInput.click()
+              } else {
+                const url = prompt("Enter image URL:", "https://")
+                if (url) this.executeCommand("insertImage", url)
+              }
+            } else if (command === "foreColor" || command === "backColor") {
+              this.executeCommand(command, value || (command === "foreColor" ? "#111827" : "#fde68a"))
+            } else {
+              this.executeCommand(command, value)
+            }
           }
         }
+      })
+    }
+
+    // Handle image file selection
+    if (this.imageInput) {
+      this.imageInput.addEventListener("change", (e) => {
+        const file = e.target.files && e.target.files[0]
+        if (!file) return
+        const reader = new FileReader()
+        reader.onload = (evt) => {
+          const dataUrl = evt.target.result
+          // Insert at current caret
+          this.executeCommand("insertImage", dataUrl)
+          // reset input so selecting the same file again triggers change
+          this.imageInput.value = ""
+        }
+        reader.readAsDataURL(file)
       })
     }
 
@@ -145,6 +175,14 @@ export const RichTextEditorHook = {
       const url = prompt("Enter URL:", selectedText || "https://")
       if (url) {
         document.execCommand("createLink", false, url)
+      }
+    } else if (command === "unlink") {
+      document.execCommand("unlink", false, null)
+    } else if ((command === "foreColor" || command === "backColor") && value) {
+      try { document.execCommand(command, false, value) } catch (_) {}
+    } else if (command === "insertImage") {
+      if (value) {
+        try { document.execCommand("insertImage", false, value) } catch (_) {}
       }
     } else if (command === "formatBlock" && value) {
       // Handle block formatting
