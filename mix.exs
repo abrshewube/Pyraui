@@ -11,7 +11,9 @@ defmodule Pyraui.MixProject do
       aliases: aliases(),
       deps: deps(),
       compilers: [:phoenix_live_view] ++ Mix.compilers(),
-      listeners: [Phoenix.CodeReloader]
+      listeners: [Phoenix.CodeReloader],
+      description: description(),
+      package: package()
     ]
   end
 
@@ -47,18 +49,14 @@ defmodule Pyraui.MixProject do
       {:lazy_html, ">= 0.1.0", only: :test},
       {:esbuild, "~> 0.10", runtime: Mix.env() == :dev},
       {:tailwind, "~> 0.3", runtime: Mix.env() == :dev},
-      {:heroicons,
-       github: "tailwindlabs/heroicons",
-       tag: "v2.2.0",
-       sparse: "optimized",
-       app: false,
-       compile: false,
-       depth: 1},
+      {:heroicons, "~> 0.5", runtime: false},
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.2.0"},
-      {:bandit, "~> 1.5"}
+      {:bandit, "~> 1.5"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:earmark_parser, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 
@@ -79,6 +77,17 @@ defmodule Pyraui.MixProject do
         "phx.digest"
       ],
       precommit: ["compile --warning-as-errors", "deps.unlock --unused", "format", "test"]
+    ]
+  end
+
+  defp description do
+    "PyraUI is a Phoenix LiveView component library delivering production-ready, premium UI building blocks."
+  end
+
+  defp package do
+    [
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => "https://github.com/AbrhamWube/ashui"}
     ]
   end
 end
