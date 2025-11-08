@@ -90,7 +90,6 @@ defmodule PyrauiWeb.DocsLive do
       |> assign(sidebar_open: true)
       |> assign(:sample_users, sample_users())
       |> assign_section_resources(section)
-      |> assign(:github_star_count, "2.4k")
 
     chat_messages = live_chat_default_messages()
     sortable_items = sortable_list_default_items()
@@ -521,10 +520,7 @@ defmodule PyrauiWeb.DocsLive do
                 </.link>
               </nav>
 
-              <div class="hidden items-center gap-3 lg:flex">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/70">
-                  {@github_star_count} GitHub stars
-                </span>
+              <div class="hidden items-center lg:flex">
                 <Pyraui.Components.Button.button
                   variant={:primary}
                   size={:sm}
@@ -538,9 +534,6 @@ defmodule PyrauiWeb.DocsLive do
               </div>
 
               <div class="flex items-center gap-3 lg:hidden">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/70">
-                  {@github_star_count} ⭐
-                </span>
                 <Pyraui.Components.Button.button
                   variant={:ghost}
                   size={:sm}

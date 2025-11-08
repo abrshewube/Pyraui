@@ -244,13 +244,6 @@ defmodule PyrauiWeb.LandingLive do
     end
     """
 
-    stats = [
-      %{value: "60+", label: "Components", icon: "hero-puzzle-piece"},
-      %{value: "98%", label: "Less code", icon: "hero-sparkles"},
-      %{value: "3.2x", label: "Faster builds", icon: "hero-bolt"},
-      %{value: "∞", label: "Customizable", icon: "hero-wrench-screwdriver"}
-    ]
-
     socket =
       socket
       |> assign(:feature_cards, feature_cards)
@@ -260,12 +253,10 @@ defmodule PyrauiWeb.LandingLive do
       |> assign(:testimonials, testimonials)
       |> assign(:install_commands, install_commands)
       |> assign(:quickstart_code, quickstart_code)
-      |> assign(:stats, stats)
       |> assign(:demo_clicks, 0)
       |> assign(:demo_modal_open?, false)
       |> assign(:demo_toast, nil)
       |> assign(:copy_feedback, nil)
-      |> assign(:github_star_count, "2.4k")
       |> assign(:active_tab, "all")
 
     {:ok, socket}
@@ -356,12 +347,12 @@ defmodule PyrauiWeb.LandingLive do
           </div>
           <div class="absolute -bottom-20 left-1/3 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl">
           </div>
-          
+
     <!-- Grid pattern -->
           <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black,transparent)]">
           </div>
         </div>
-        
+
     <!-- Header -->
         <header class="relative z-10 px-6 pt-10 md:px-12 xl:px-20">
           <div class="mx-auto flex max-w-7xl items-center justify-between gap-6">
@@ -399,10 +390,7 @@ defmodule PyrauiWeb.LandingLive do
               <% end %>
             </nav>
 
-            <div class="hidden items-center gap-3 lg:flex">
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/70">
-                {@github_star_count} GitHub stars
-              </span>
+            <div class="hidden items-center lg:flex">
               <Pyraui.Components.Button.button
                 variant={:primary}
                 size={:sm}
@@ -414,10 +402,7 @@ defmodule PyrauiWeb.LandingLive do
               </Pyraui.Components.Button.button>
             </div>
 
-            <div class="flex items-center gap-3 lg:hidden">
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/70">
-                {@github_star_count} ⭐
-              </span>
+            <div class="flex items-center lg:hidden">
               <Pyraui.Components.Button.button
                 variant={:ghost}
                 size={:sm}
@@ -430,7 +415,7 @@ defmodule PyrauiWeb.LandingLive do
             </div>
           </div>
         </header>
-        
+
     <!-- Hero Section -->
         <section class="relative isolate px-6 pt-32 pb-40 md:px-12 xl:px-20 overflow-hidden">
           <!-- Floating elements -->
@@ -466,17 +451,7 @@ defmodule PyrauiWeb.LandingLive do
                 UI library for Phoenix.
                 Prebuilt components that feel amazing out of the box.
               </p>
-              
-    <!-- Stats -->
-              <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
-                <div :for={stat <- @stats} class="text-center">
-                  <div class="text-2xl font-bold text-white bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    {stat.value}
-                  </div>
-                  <div class="text-xs text-slate-400 mt-1">{stat.label}</div>
-                </div>
-              </div>
-              
+
     <!-- CTA Buttons -->
               <div class="mt-12 flex flex-wrap items-center gap-4">
                 <Pyraui.Components.Button.button
@@ -511,7 +486,7 @@ defmodule PyrauiWeb.LandingLive do
                 </Pyraui.Components.Button.button>
               </div>
             </div>
-            
+
     <!-- Hero Visual -->
             <div class="relative">
               <!-- Main card -->
@@ -546,7 +521,7 @@ defmodule PyrauiWeb.LandingLive do
                         <div class="mt-1 text-[0.6rem] text-slate-400">+{Enum.random(5..15)}%</div>
                       </div>
                     </div>
-                    
+
     <!-- Chart preview -->
                     <div class="rounded-2xl border border-white/5 bg-gradient-to-br from-slate-900/80 to-slate-900/60 p-4 backdrop-blur-sm">
                       <div class="flex items-center justify-between">
@@ -566,7 +541,7 @@ defmodule PyrauiWeb.LandingLive do
                         </div>
                       </div>
                     </div>
-                    
+
     <!-- Components preview -->
                     <div class="rounded-2xl border border-white/5 bg-gradient-to-br from-slate-900/80 to-slate-900/60 p-4 backdrop-blur-sm">
                       <div class="text-xs uppercase text-slate-400">Components</div>
@@ -582,7 +557,7 @@ defmodule PyrauiWeb.LandingLive do
                   </div>
                 </div>
               </div>
-              
+
     <!-- Floating elements around card -->
               <div class="absolute -top-4 -right-4 w-8 h-8 bg-purple-400 rounded-full blur-xl animate-pulse">
               </div>
@@ -591,7 +566,7 @@ defmodule PyrauiWeb.LandingLive do
             </div>
           </div>
         </section>
-        
+
     <!-- Features Section -->
         <section class="relative py-32 overflow-hidden">
           <!-- Background -->
@@ -638,7 +613,7 @@ defmodule PyrauiWeb.LandingLive do
             </div>
           </div>
         </section>
-        
+
     <!-- Interactive Demo Section -->
         <section class="relative py-32 overflow-hidden">
           <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950">
@@ -663,7 +638,7 @@ defmodule PyrauiWeb.LandingLive do
                 <p class="mt-6 text-lg text-slate-300">
                   See how PyraUI components respond instantly to user interactions with buttery-smooth animations and real-time updates.
                 </p>
-                
+
     <!-- Demo controls -->
                 <div class="mt-8 grid gap-4">
                   <Pyraui.Components.Button.button
@@ -707,7 +682,7 @@ defmodule PyrauiWeb.LandingLive do
                     </Pyraui.Components.Button.button>
                   </div>
                 </div>
-                
+
     <!-- Demo feedback -->
                 <div class="mt-8 space-y-6">
                   <div class="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
@@ -737,7 +712,7 @@ defmodule PyrauiWeb.LandingLive do
                   <% end %>
                 </div>
               </div>
-              
+
     <!-- Demo visual -->
               <div class="relative">
                 <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-900/60 p-8 shadow-2xl shadow-blue-500/20 backdrop-blur-xl">
@@ -757,7 +732,7 @@ defmodule PyrauiWeb.LandingLive do
                       </div>
                       <p class="mt-2 text-sm text-slate-400">LiveView events processed</p>
                     </div>
-                    
+
     <!-- Status indicators -->
                     <div class="grid grid-cols-2 gap-4">
                       <div class="rounded-2xl border border-white/5 bg-slate-900/60 p-4 text-center">
@@ -775,7 +750,7 @@ defmodule PyrauiWeb.LandingLive do
                     </div>
                   </div>
                 </div>
-                
+
     <!-- Floating elements -->
                 <div class="absolute -top-6 -right-6 w-12 h-12 bg-blue-400 rounded-full blur-xl opacity-50 animate-pulse">
                 </div>
@@ -784,7 +759,7 @@ defmodule PyrauiWeb.LandingLive do
               </div>
             </div>
           </div>
-          
+
     <!-- Demo Modal -->
           <%= if @demo_modal_open? do %>
             <div class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-xl transition-opacity animate-in fade-in duration-300">
@@ -841,7 +816,7 @@ defmodule PyrauiWeb.LandingLive do
             </div>
           <% end %>
         </section>
-        
+
     <!-- Components Gallery -->
         <section class="relative py-32 overflow-hidden">
           <div class="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900">
@@ -865,7 +840,7 @@ defmodule PyrauiWeb.LandingLive do
                 From simple buttons to complex data visualizations. Every component is designed to work beautifully together.
               </p>
             </div>
-            
+
     <!-- Category tabs -->
             <div class="mt-12 flex flex-wrap justify-center gap-4">
               <button
@@ -910,7 +885,7 @@ defmodule PyrauiWeb.LandingLive do
                       <% end %>
                     </Pyraui.Components.Button.button>
                   </div>
-                  
+
     <!-- Component preview -->
                   <div class="mt-6 relative overflow-hidden rounded-2xl border border-white/5 bg-slate-900/80 p-6 backdrop-blur-sm">
                     <div class="absolute inset-x-6 top-4 flex items-center gap-2 text-[0.65rem] uppercase tracking-wide text-slate-400">
@@ -999,7 +974,7 @@ defmodule PyrauiWeb.LandingLive do
                       <% end %>
                     </div>
                   </div>
-                  
+
     <!-- Code snippet -->
                   <pre class="mt-6 overflow-x-auto rounded-2xl border border-white/5 bg-slate-950 p-6 text-xs leading-relaxed text-blue-200 backdrop-blur-sm">
     {gallery.code}
@@ -1009,7 +984,7 @@ defmodule PyrauiWeb.LandingLive do
             </div>
           </div>
         </section>
-        
+
     <!-- Installation Section -->
         <section class="relative py-32 overflow-hidden">
           <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-950">
@@ -1032,7 +1007,7 @@ defmodule PyrauiWeb.LandingLive do
                 <p class="mt-6 text-lg text-slate-300">
                   Add PyraUI to your Phoenix project and start building beautiful interfaces immediately.
                 </p>
-                
+
     <!-- Installation steps -->
                 <div class="mt-8 space-y-4">
                   <div
@@ -1049,7 +1024,7 @@ defmodule PyrauiWeb.LandingLive do
                   </div>
                 </div>
               </div>
-              
+
     <!-- Code example -->
               <div class="relative">
                 <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-900/60 p-8 shadow-2xl shadow-cyan-500/20 backdrop-blur-xl">
@@ -1063,7 +1038,7 @@ defmodule PyrauiWeb.LandingLive do
     {@quickstart_code}
                   </pre>
                 </div>
-                
+
     <!-- Floating elements -->
                 <div class="absolute -top-6 -right-6 w-12 h-12 bg-cyan-400 rounded-full blur-xl opacity-50 animate-pulse">
                 </div>
@@ -1073,7 +1048,7 @@ defmodule PyrauiWeb.LandingLive do
             </div>
           </div>
         </section>
-        
+
     <!-- Integrations Section -->
         <section class="relative py-32 overflow-hidden">
           <div class="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900">
@@ -1122,7 +1097,7 @@ defmodule PyrauiWeb.LandingLive do
             </div>
           </div>
         </section>
-        
+
     <!-- Testimonials Section -->
         <section class="relative py-32 overflow-hidden">
           <div class="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950">
@@ -1171,7 +1146,7 @@ defmodule PyrauiWeb.LandingLive do
             </div>
           </div>
         </section>
-        
+
     <!-- Final CTA Section -->
         <section class="relative py-32 overflow-hidden">
           <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-950 to-purple-950">
@@ -1229,7 +1204,7 @@ defmodule PyrauiWeb.LandingLive do
             </div>
           </div>
         </section>
-        
+
     <!-- Footer -->
         <footer class="relative bg-slate-950/95 py-16 text-slate-300 border-t border-white/10">
           <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent">
