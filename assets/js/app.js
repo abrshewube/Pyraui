@@ -22,7 +22,7 @@ import "phoenix_html"
 // Establish Phoenix Socket and LiveView configuration.
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
-import {hooks as colocatedHooks} from "phoenix-colocated/ashui"
+import {hooks as colocatedHooks} from "../vendor/phoenix-colocated/ashui"
 import topbar from "../vendor/topbar"
 import {RichTextEditorHook} from "./rich_text_editor_hook"
 import {CarouselHook} from "./carousel_hook"
