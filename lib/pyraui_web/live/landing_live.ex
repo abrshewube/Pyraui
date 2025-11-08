@@ -52,7 +52,7 @@ defmodule PyrauiWeb.LandingLive do
       %{label: "Components", navigate: ~p"/docs/components"},
       %{label: "Playground", href: "https://demo.ashui.dev"},
       %{label: "Roadmap", navigate: ~p"/docs/roadmap"},
-      %{label: "GitHub", href: "https://github.com/AbrhamWube/ashui", target: "_blank"}
+      %{label: "GitHub", href: "https://github.com/abrshewube/Pyraui", target: "_blank"}
     ]
 
     component_gallery = [
@@ -476,7 +476,7 @@ defmodule PyrauiWeb.LandingLive do
                   variant={:ghost}
                   size={:xl}
                   class="px-10 py-4 text-lg font-semibold text-white/90 border-white/20 hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300 hover:scale-105"
-                  href="https://github.com/AbrhamWube/ashui"
+                  href="https://github.com/abrshewube/Pyraui"
                   id="cta-view-github"
                   target="_blank"
                 >
@@ -1190,7 +1190,7 @@ defmodule PyrauiWeb.LandingLive do
                 variant={:ghost}
                 size={:xl}
                 class="px-12 py-4 text-lg font-semibold text-white/90 border-white/20 hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300 hover:scale-110"
-                href="https://github.com/AbrhamWube/ashui"
+                href="https://github.com/abrshewube/Pyraui"
                 target="_blank"
               >
                 <span class="flex items-center gap-3">
@@ -1221,7 +1221,7 @@ defmodule PyrauiWeb.LandingLive do
                 </p>
                 <div class="mt-6 flex gap-4">
                   <.link
-                    href="https://github.com/AbrhamWube/ashui"
+                    href="https://github.com/abrshewube/Pyraui"
                     class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-white/20"
                   >
                     <.icon name="hero-github" class="h-5 w-5" />
@@ -1263,7 +1263,7 @@ defmodule PyrauiWeb.LandingLive do
                     Getting Started
                   </.link>
                   <.link
-                    href="https://github.com/AbrhamWube/ashui"
+                    href="https://github.com/abrshewube/Pyraui"
                     class="block text-slate-400 hover:text-white transition-colors"
                   >
                     GitHub
@@ -1275,13 +1275,13 @@ defmodule PyrauiWeb.LandingLive do
                 <h4 class="text-sm font-semibold uppercase tracking-wider text-white">Community</h4>
                 <div class="mt-4 space-y-3">
                   <.link
-                    href="https://github.com/AbrhamWube/ashui/discussions"
+                    href="https://github.com/abrshewube/Pyraui/discussions"
                     class="block text-slate-400 hover:text-white transition-colors"
                   >
                     Discussions
                   </.link>
                   <.link
-                    href="https://github.com/AbrhamWube/ashui/issues"
+                    href="https://github.com/abrshewube/Pyraui/issues"
                     class="block text-slate-400 hover:text-white transition-colors"
                   >
                     Issues
@@ -1306,7 +1306,7 @@ defmodule PyrauiWeb.LandingLive do
               <p>Copyright © 2025 PyraUI. All rights reserved.</p>
               <div class="flex gap-6">
                 <.link
-                  href="https://github.com/AbrhamWube/ashui/blob/main/LICENSE"
+                  href="https://github.com/abrshewube/Pyraui/blob/main/LICENSE"
                   class="hover:text-slate-400 transition-colors"
                 >
                   MIT License

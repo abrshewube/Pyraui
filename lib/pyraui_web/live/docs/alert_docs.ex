@@ -3,18 +3,11 @@ defmodule PyrauiWeb.DocsLive.AlertDocs do
 
   def render(assigns) do
     ~H"""
-    <div class="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-white to-slate-50 px-6 py-10 text-slate-900 shadow-[0_60px_140px_-90px_rgba(15,23,42,0.35)]">
-      <div class="pointer-events-none absolute -top-48 -right-36 h-80 w-80 rounded-full bg-sky-200/40 blur-3xl">
-      </div>
-      <div class="pointer-events-none absolute -bottom-52 -left-40 h-96 w-96 rounded-full bg-rose-200/30 blur-3xl">
-      </div>
-      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.08),_transparent_70%)]">
-      </div>
-
-      <div class="relative z-10 space-y-12">
+    <div class="space-y-12 rounded-3xl border border-slate-200 bg-white px-6 py-10 text-slate-900 shadow-lg">
+      <div class="space-y-12">
         <header class="space-y-4">
-          <span class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-sky-600">
-            Alert <span class="h-1 w-1 rounded-full bg-sky-500"></span> Showcase
+          <span class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-slate-600">
+            Alert <span class="h-1 w-1 rounded-full bg-slate-500"></span> Showcase
           </span>
           <h1 class="text-4xl font-semibold tracking-tight text-slate-900">Alert</h1>
           <p class="max-w-3xl text-lg leading-relaxed text-slate-600">
@@ -22,7 +15,7 @@ defmodule PyrauiWeb.DocsLive.AlertDocs do
           </p>
         </header>
 
-        <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_24px_80px_-60px_rgba(15,23,42,0.18)] transition-all duration-200 hover:-translate-y-1">
+        <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-md transition-all duration-200 hover:-translate-y-1">
           <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
               <h2 class="text-2xl font-semibold text-slate-900">Quick Alerts</h2>
@@ -69,7 +62,7 @@ defmodule PyrauiWeb.DocsLive.AlertDocs do
           </div>
         </section>
 
-        <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_24px_80px_-60px_rgba(59,130,246,0.22)] transition-all duration-300 hover:-translate-y-1">
+        <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-md transition-all duration-300 hover:-translate-y-1">
           <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
             <div>
               <h2 class="text-2xl font-semibold text-slate-900">Enhanced Experiences</h2>
@@ -199,7 +192,7 @@ defmodule PyrauiWeb.DocsLive.AlertDocs do
           </div>
         </section>
 
-        <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_24px_80px_-60px_rgba(147,197,253,0.25)] transition-all duration-300 hover:-translate-y-1">
+        <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-md transition-all duration-300 hover:-translate-y-1">
           <div class="flex flex-col gap-2">
             <h2 class="text-2xl font-semibold text-slate-900">Dismissible + Actions</h2>
             <p class="text-sm text-slate-600">
@@ -251,7 +244,7 @@ defmodule PyrauiWeb.DocsLive.AlertDocs do
           </div>
         </section>
 
-        <section class="rounded-2xl border border-slate-200 bg-white p-8">
+        <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
           <h2 class="text-2xl font-semibold text-slate-900">Props</h2>
           <p class="mt-2 max-w-xl text-sm text-slate-600">
             Configure alerts with a small, expressive API. Defaults are optimised for accessibility, motion polish, and theming.

@@ -2,7 +2,7 @@
 
 PyraUI’s `datepicker/1` component surfaces multiple calendar modes with soft gradients, outline variants, and size controls. This playbook covers configuration, advanced attributes, and constraint logic.
 
-> Live demo: [`/docs/datepicker`](http://localhost:4000/docs/datepicker)
+> Live demo: [`/docs/datepicker`](https://pyraui.onrender.com/docs/datepicker)
 
 ## Component attributes
 

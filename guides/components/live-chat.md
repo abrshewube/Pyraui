@@ -2,7 +2,7 @@
 
 `Pyraui.Components.LiveChat` turns any LiveView into a polished support or collaboration surface—complete with typing indicators, quick replies, and glassmorphism styling.
 
-> Live demo: [`/docs/live-chat`](http://localhost:4000/docs/live-chat)
+> Live demo: [`/docs/live-chat`](https://pyraui.onrender.com/docs/live-chat)
 
 ## Anatomy
 

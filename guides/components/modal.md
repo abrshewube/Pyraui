@@ -2,7 +2,7 @@
 
 PyraUI’s `modal/1` component offers immersive dialogs with tone-aware styling, smooth transitions, and accessible semantics. Use this guide to wire classic confirmations, glassmorphism coaching modals, and destructive flows.
 
-> Live demo: [`/docs/modal`](http://localhost:4000/docs/modal)
+> Live demo: [`/docs/modal`](https://pyraui.onrender.com/docs/modal)
 
 ## API surface
 

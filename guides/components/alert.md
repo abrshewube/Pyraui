@@ -2,7 +2,7 @@
 
 PyraUI’s `alert/1` component delivers cinematic notifications built for LiveView—complete with badges, action slots, and glassmorphism effects. This guide walks through the API, real-world configurations, and how to tie alerts to runtime assigns.
 
-> Live demo: run the playground and open [`/docs/alert`](http://localhost:4000/docs/alert) for hover previews and dismissible interactions.
+> Live demo: run the playground and open [`/docs/alert`](https://pyraui.onrender.com/docs/alert) for hover previews and dismissible interactions.
 
 ## API overview
 

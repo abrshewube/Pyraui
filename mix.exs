@@ -4,7 +4,7 @@ defmodule Pyraui.MixProject do
   def project do
     [
       app: :pyraui,
-      version: "0.1.1",
+      version: "0.1.2",
       elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
@@ -88,38 +88,32 @@ defmodule Pyraui.MixProject do
   defp package do
     [
       licenses: ["Apache-2.0"],
-      links: %{"GitHub" => "https://github.com/AbrhamWube/ashui"}
+      links: %{"GitHub" => "https://github.com/abrshewube/Pyraui"}
     ]
   end
 
   defp docs do
+    component_guides =
+      "guides/components/*.md"
+      |> Path.wildcard()
+      |> Enum.sort()
+      |> Enum.map(&String.replace(&1, "\\", "/"))
+
     [
       main: "readme",
-      extras: [
-        "README.md",
-        "LICENSE",
-        "guides/overview.md",
-        "guides/getting-started.md",
-        "guides/components/alert.md",
-        "guides/components/theme-switch.md",
-        "guides/components/live-chat.md",
-        "guides/components/table.md",
-        "guides/components/modal.md",
-        "guides/components/datepicker.md"
-      ],
+      extras:
+        [
+          "README.md",
+          "LICENSE",
+          "guides/overview.md",
+          "guides/getting-started.md"
+        ] ++ component_guides,
       groups_for_extras: [
         "Core Guides": [
           "guides/overview.md",
           "guides/getting-started.md"
         ],
-        "Component Spotlights": [
-          "guides/components/alert.md",
-          "guides/components/theme-switch.md",
-          "guides/components/live-chat.md",
-          "guides/components/table.md",
-          "guides/components/modal.md",
-          "guides/components/datepicker.md"
-        ],
+        "Component Spotlights": component_guides,
         Reference: ["LICENSE"]
       ]
     ]

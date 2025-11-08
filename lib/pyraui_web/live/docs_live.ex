@@ -512,7 +512,7 @@ defmodule PyrauiWeb.DocsLive do
                   Playground
                 </.link>
                 <.link
-                  href="https://github.com/AbrhamWube/ashui"
+                  href="https://github.com/abrshewube/Pyraui"
                   target="_blank"
                   class="transition-colors duration-200 hover:text-white"
                 >

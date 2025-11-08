@@ -2,7 +2,7 @@
 
 PyraUI’s `table/1` component balances dense data layouts with refined presentation. This guide outlines the available knobs, shows how to render custom cells, and explains how to handle blank states in LiveView.
 
-> Live demo: [`/docs/table`](http://localhost:4000/docs/table)
+> Live demo: [`/docs/table`](https://pyraui.onrender.com/docs/table)
 
 ## API highlights
 

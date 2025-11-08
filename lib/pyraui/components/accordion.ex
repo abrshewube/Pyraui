@@ -29,44 +29,35 @@ defmodule Pyraui.Components.Accordion do
 
   def accordion(assigns) do
     ~H"""
-    <div class={["space-y-2", @class]} {@rest}>
-      <%= for item <- @item do %>
-        <div class="border border-gray-200 rounded-lg overflow-hidden">
-          <button
-            type="button"
-            phx-click="toggle-accordion"
-            phx-value-id={item.id}
-            class="w-full px-4 py-3 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+    <div class={["space-y-3", @class]} {@rest}>
+      <details
+        :for={item <- @item}
+        id={item.id}
+        class="group rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+        open={Map.get(item, :open, false)}
+      >
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left marker:content-none"
+        >
+          <span class="text-sm font-semibold text-slate-900">{item.title}</span>
+          <svg
+            class="h-5 w-5 text-slate-400 transition-transform duration-200 group-open:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <span class="font-medium text-gray-900">{item.title}</span>
-            <svg
-              class={[
-                "w-5 h-5 text-gray-500 transition-transform",
-                if(Map.get(item, :open, false), do: "rotate-180", else: "")
-              ]}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          <div
-            id={"#{item.id}-content"}
-            class={[
-              "px-4 py-3 transition-all",
-              if(Map.get(item, :open, false), do: "block", else: "hidden")
-            ]}
-          >
-            {render_slot(item)}
-          </div>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </summary>
+        <div class="px-5 pb-5 text-sm leading-relaxed text-slate-600">
+          {render_slot(item)}
         </div>
-      <% end %>
+      </details>
     </div>
     """
   end

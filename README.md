@@ -4,6 +4,18 @@ PyraUI is a premium, production-ready component system for Phoenix LiveView. It 
 
 ---
 
+## 🌌 Crafting Delightful LiveView Experiences
+
+PyraUI is more than a component library—it is a design language shaped for real-time Phoenix apps. Each module embraces:
+
+- Harmonized typography, motion, and spacing that feel at home in modern SaaS.
+- Reactive data pipelines powered by LiveView streams and accessible by default.
+- Tailwind-first styling tuned for dark surfaces, glassmorphism, and premium gradients.
+
+Whether you are launching dashboards, collaboration tools, or consumer experiences, PyraUI accelerates the journey from prototype to production without sacrificing craft.
+
+---
+
 ## ✨ Highlights
 
 - **100+ LiveView-first components** spanning form controls, data viz, overlays, navigation, and layout primitives
@@ -72,7 +84,7 @@ You now have every component available inside your HEEx templates:
 | Resource | Description |
 | --- | --- |
 | **Component Docs** | [hexdocs.pm/pyraui](https://hexdocs.pm/pyraui) – API reference generated via ExDoc |
-| **Interactive Gallery** | Run the demo (`mix phx.server`) and visit [`http://localhost:4000/docs`](http://localhost:4000/docs) to explore every component live |
+| **Interactive Gallery** | Explore components at [`https://pyraui.onrender.com/docs`](https://pyraui.onrender.com/docs) with live previews |
 | **Guides & Recipes** | Coming soon – will cover theming, component composition, and deployment best practices |
 
 Popular entry points in the playground:
@@ -108,13 +120,32 @@ Every component ships with:
 Clone the repo and explore the full playground locally:
 
 ```bash
-git clone https://github.com/AbrhamWube/ashui.git pyraui
+git clone https://github.com/abrshewube/Pyraui.git pyraui
 cd pyraui
 mix deps.get
 mix phx.server
 ```
 
-Navigate to `http://localhost:4000` for the landing page and `http://localhost:4000/docs` for the interactive component explorer. You can tweak assigns live and see the UI respond instantly thanks to LiveView streams.
+Visit [`https://pyraui.onrender.com`](https://pyraui.onrender.com) for the landing page and [`https://pyraui.onrender.com/docs`](https://pyraui.onrender.com/docs) for the interactive component explorer. You can tweak assigns live and see the UI respond instantly thanks to LiveView streams.
+
+---
+
+## 🌐 Project Links
+
+- GitHub: [abrshewube/Pyraui](https://github.com/abrshewube/Pyraui)
+- HexDocs: [hexdocs.pm/pyraui](https://hexdocs.pm/pyraui)
+- Issue Tracker: [GitHub Issues](https://github.com/abrshewube/Pyraui/issues)
+
+---
+
+## 🤝 Collaborate With PyraUI
+
+Passionate about elevating LiveView interfaces? Let's build together:
+
+- ✉️ [abrhamwube1@gmail.com](mailto:abrhamwube1@gmail.com)
+- 🔗 [LinkedIn · Abrham Gobezie](https://www.linkedin.com/in/abrham-gobezie-148a12247/)
+
+Bring your ideas, showcase your projects, or reach out if you want to sponsor premium components. PyraUI thrives on community energy—your insight shapes the next wave of Phoenix UI.
 
 ---
 
@@ -126,7 +157,7 @@ Navigate to `http://localhost:4000` for the landing page and `http://localhost:4
 - [ ] Additional chart renderers (sparkline, radar, area)
 - [ ] CLI for scaffolding new components
 
-Follow updates and contribute ideas via [GitHub issues](https://github.com/AbrhamWube/ashui/issues).
+Follow updates and contribute ideas via [GitHub issues](https://github.com/abrshewube/Pyraui/issues).
 
 ---
 

@@ -2,7 +2,7 @@
 
 The `theme_toggle/1` component lets users flip between light, dark, and custom modes with delightful micro-interactions. This guide covers the available variants, integrating with LiveView assigns, and tying toggle events into your own theme logic.
 
-> Live demo: [`/docs/theme-switch`](http://localhost:4000/docs/theme-switch)
+> Live demo: [`/docs/theme-switch`](https://pyraui.onrender.com/docs/theme-switch)
 
 ## Variants at a glance
 

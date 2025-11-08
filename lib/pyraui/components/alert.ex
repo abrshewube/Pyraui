@@ -39,59 +39,59 @@ defmodule Pyraui.Components.Alert do
     variant_styles = %{
       info: %{
         container:
-          "border border-blue-400/30 bg-blue-500/10 text-blue-50 shadow-[0_12px_45px_-25px_rgba(59,130,246,0.75)]",
-        glow: "bg-blue-500/20",
-        accent: "from-sky-400 via-blue-500 to-indigo-500",
-        icon_wrap: "bg-blue-500/15 text-blue-100 ring-1 ring-blue-400/30",
-        badge: "border border-blue-300/40 bg-blue-500/15 text-blue-100"
+          "border border-blue-200 bg-blue-50 text-blue-900 shadow-[0_18px_60px_-40px_rgba(59,130,246,0.35)]",
+        glow: "bg-blue-100/40",
+        accent: "from-sky-400 via-blue-400 to-indigo-400",
+        icon_wrap: "bg-blue-100 text-blue-600 ring-1 ring-blue-200",
+        badge: "border border-blue-200 bg-blue-50 text-blue-600"
       },
       success: %{
         container:
-          "border border-emerald-400/25 bg-emerald-500/10 text-emerald-50 shadow-[0_12px_45px_-25px_rgba(16,185,129,0.6)]",
-        glow: "bg-emerald-400/20",
+          "border border-emerald-200 bg-emerald-50 text-emerald-900 shadow-[0_18px_60px_-40px_rgba(16,185,129,0.3)]",
+        glow: "bg-emerald-100/40",
         accent: "from-emerald-400 via-green-400 to-lime-400",
-        icon_wrap: "bg-emerald-500/15 text-emerald-100 ring-1 ring-emerald-400/30",
-        badge: "border border-emerald-300/40 bg-emerald-500/15 text-emerald-100"
+        icon_wrap: "bg-emerald-100 text-emerald-600 ring-1 ring-emerald-200",
+        badge: "border border-emerald-200 bg-emerald-50 text-emerald-600"
       },
       warning: %{
         container:
-          "border border-amber-400/35 bg-amber-400/10 text-amber-50 shadow-[0_12px_45px_-25px_rgba(251,191,36,0.55)]",
-        glow: "bg-amber-400/20",
+          "border border-amber-200 bg-amber-50 text-amber-900 shadow-[0_18px_60px_-40px_rgba(251,191,36,0.35)]",
+        glow: "bg-amber-100/40",
         accent: "from-amber-400 via-orange-400 to-yellow-400",
-        icon_wrap: "bg-amber-400/15 text-amber-100 ring-1 ring-amber-300/30",
-        badge: "border border-amber-300/40 bg-amber-400/15 text-amber-100"
+        icon_wrap: "bg-amber-100 text-amber-600 ring-1 ring-amber-200",
+        badge: "border border-amber-200 bg-amber-50 text-amber-600"
       },
       danger: %{
         container:
-          "border border-rose-500/30 bg-rose-500/10 text-rose-50 shadow-[0_12px_45px_-25px_rgba(244,63,94,0.6)]",
-        glow: "bg-rose-500/20",
-        accent: "from-rose-500 via-red-500 to-pink-500",
-        icon_wrap: "bg-rose-500/15 text-rose-100 ring-1 ring-rose-400/30",
-        badge: "border border-rose-300/40 bg-rose-500/15 text-rose-100"
+          "border border-rose-200 bg-rose-50 text-rose-900 shadow-[0_18px_60px_-40px_rgba(244,63,94,0.35)]",
+        glow: "bg-rose-100/40",
+        accent: "from-rose-400 via-red-400 to-pink-400",
+        icon_wrap: "bg-rose-100 text-rose-600 ring-1 ring-rose-200",
+        badge: "border border-rose-200 bg-rose-50 text-rose-600"
       },
       celebrate: %{
         container:
-          "border border-fuchsia-400/30 bg-fuchsia-500/10 text-fuchsia-50 shadow-[0_12px_45px_-25px_rgba(217,70,239,0.6)]",
-        glow: "bg-fuchsia-500/20",
+          "border border-fuchsia-200 bg-fuchsia-50 text-fuchsia-900 shadow-[0_18px_60px_-40px_rgba(217,70,239,0.3)]",
+        glow: "bg-fuchsia-100/40",
         accent: "from-fuchsia-400 via-purple-400 to-pink-400",
-        icon_wrap: "bg-fuchsia-500/15 text-fuchsia-100 ring-1 ring-fuchsia-400/30",
-        badge: "border border-fuchsia-300/40 bg-fuchsia-500/20 text-fuchsia-100"
+        icon_wrap: "bg-fuchsia-100 text-fuchsia-600 ring-1 ring-fuchsia-200",
+        badge: "border border-fuchsia-200 bg-fuchsia-50 text-fuchsia-600"
       },
       neutral: %{
         container:
-          "border border-slate-400/25 bg-slate-500/10 text-slate-100 shadow-[0_12px_45px_-25px_rgba(148,163,184,0.45)]",
-        glow: "bg-slate-500/15",
-        accent: "from-slate-300 via-slate-400 to-slate-600",
-        icon_wrap: "bg-slate-500/15 text-slate-100 ring-1 ring-slate-400/30",
-        badge: "border border-slate-300/35 bg-slate-600/20 text-slate-100"
+          "border border-slate-200 bg-slate-50 text-slate-900 shadow-[0_18px_60px_-40px_rgba(148,163,184,0.35)]",
+        glow: "bg-slate-200/40",
+        accent: "from-slate-300 via-slate-400 to-slate-500",
+        icon_wrap: "bg-slate-100 text-slate-600 ring-1 ring-slate-200",
+        badge: "border border-slate-200 bg-slate-50 text-slate-600"
       },
       note: %{
         container:
-          "border border-sky-400/25 bg-sky-500/10 text-sky-50 shadow-[0_12px_45px_-25px_rgba(14,165,233,0.55)]",
-        glow: "bg-sky-400/20",
+          "border border-sky-200 bg-sky-50 text-sky-900 shadow-[0_18px_60px_-40px_rgba(14,165,233,0.35)]",
+        glow: "bg-sky-100/40",
         accent: "from-sky-400 via-cyan-400 to-blue-400",
-        icon_wrap: "bg-sky-500/15 text-sky-100 ring-1 ring-sky-400/30",
-        badge: "border border-sky-300/40 bg-sky-500/15 text-sky-100"
+        icon_wrap: "bg-sky-100 text-sky-600 ring-1 ring-sky-200",
+        badge: "border border-sky-200 bg-sky-50 text-sky-600"
       }
     }
 
@@ -119,7 +119,7 @@ defmodule Pyraui.Components.Alert do
       aria-live="polite"
       aria-atomic="true"
       class={[
-        "group/alert relative overflow-hidden rounded-xl border px-5 py-4 text-sm leading-6 backdrop-blur-md transition-all duration-200",
+        "group/alert relative overflow-hidden rounded-xl border px-5 py-4 text-sm leading-6 transition-all duration-200",
         @variant_config.container,
         @class
       ]}
@@ -152,24 +152,24 @@ defmodule Pyraui.Components.Alert do
           </div>
         <% end %>
 
-        <div class="flex-1 space-y-2 text-sm text-white/85">
+        <div class="flex-1 space-y-2 text-sm text-slate-700">
           <div class="flex flex-wrap items-center gap-2">
             <%= if @badge do %>
               <span class={[
                 "inline-flex items-center gap-2 rounded-full px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.35em]",
                 @variant_config.badge
               ]}>
-                <span class="h-1 w-1 rounded-full bg-white/70"></span>
+                <span class="h-1 w-1 rounded-full bg-current/60"></span>
                 {@badge}
               </span>
             <% end %>
 
             <%= if @title do %>
-              <h3 class="text-sm font-semibold tracking-tight text-white/95">{@title}</h3>
+              <h3 class="text-sm font-semibold tracking-tight text-slate-900">{@title}</h3>
             <% end %>
           </div>
 
-          <div class="space-y-1 text-[0.9rem] leading-6 text-white/80">
+          <div class="space-y-1 text-[0.95rem] leading-6 text-slate-600">
             <%= if assigns[:inner_block] != [] do %>
               {render_slot(@inner_block)}
             <% else %>
@@ -189,7 +189,7 @@ defmodule Pyraui.Components.Alert do
         <%= if @dismissible do %>
           <button
             type="button"
-            class="flex-shrink-0 rounded-full p-1 text-white/70 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-white/40"
+            class="flex-shrink-0 rounded-full p-1 text-slate-400 transition hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-300"
             phx-click={JS.push("dismiss-alert", value: %{id: @id}) |> JS.hide(transition: "fade-out")}
             aria-label="Dismiss alert"
           >

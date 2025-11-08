@@ -58,7 +58,7 @@ Run the bundled demo to browse every component variant:
 mix phx.server
 ```
 
-Visit [`http://localhost:4000/docs`](http://localhost:4000/docs) to open the LiveView documentation index. Each page demonstrates real-time interactions, theme switches, and code snippets you can copy straight into your application.
+Visit [`https://pyraui.onrender.com/docs`](https://pyraui.onrender.com/docs) to open the LiveView documentation index. Each page demonstrates real-time interactions, theme switches, and code snippets you can copy straight into your application.
 
 ## 5. Next steps
 
@@ -67,7 +67,7 @@ Visit [`http://localhost:4000/docs`](http://localhost:4000/docs) to open the Liv
   - [Theme Switch Gallery](components/theme-switch.md)
   - [Live Chat Experience](components/live-chat.md)
 - Customize Tailwind tokens or layer PyraUI on top of your design system by overriding the `class` assign on any component.
-- Join the conversation or report issues on [GitHub](https://github.com/AbrhamWube/ashui/issues).
+- Join the conversation or report issues on [GitHub](https://github.com/abrshewube/Pyraui/issues).
 
 Happy shipping! 🚀
 
