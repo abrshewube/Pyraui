@@ -3,18 +3,23 @@ const fs = require("fs")
 const path = require("path")
 
 module.exports = plugin(function({matchComponents, theme}) {
-  let iconsDir = path.join(__dirname, "../../deps/heroicons/optimized")
+  let iconsDir = path.join(__dirname, "../../assets/icons")
   let values = {}
-  let icons = [
-    ["", "/24/outline"],
-    ["-solid", "/24/solid"],
-    ["-mini", "/20/solid"],
-    ["-micro", "/16/solid"]
+  let variants = [
+    ["", "outline"],
+    ["-solid", "solid"],
+    ["-mini", "mini"],
+    ["-micro", "micro"]
   ]
-  icons.forEach(([suffix, dir]) => {
-    fs.readdirSync(path.join(iconsDir, dir)).forEach(file => {
+  variants.forEach(([suffix, dir]) => {
+    let dirPath = path.join(iconsDir, dir)
+    if (!fs.existsSync(dirPath)) {
+      return
+    }
+    fs.readdirSync(dirPath).forEach(file => {
+      if (path.extname(file) !== ".svg") return
       let name = path.basename(file, ".svg") + suffix
-      values[name] = {name, fullPath: path.join(iconsDir, dir, file)}
+      values[name] = {name, fullPath: path.join(dirPath, file)}
     })
   })
   matchComponents({
