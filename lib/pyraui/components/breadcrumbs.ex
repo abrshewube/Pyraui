@@ -38,6 +38,7 @@ defmodule Pyraui.Components.Breadcrumbs do
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <%= for {item, index} <- Enum.with_index(@item) do %>
           <li class="inline-flex items-center">
+            <% active? = Map.get(item, :active, false) %>
             <%= if index > 0 do %>
               <svg class="w-3 h-3 text-gray-400 mx-1" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -48,7 +49,7 @@ defmodule Pyraui.Components.Breadcrumbs do
               </svg>
             <% end %>
 
-            <%= if item.active do %>
+            <%= if active? do %>
               <span class="text-sm font-medium text-gray-500" aria-current="page">
                 {render_slot(item)}
               </span>

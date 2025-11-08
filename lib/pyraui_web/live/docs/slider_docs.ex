@@ -38,7 +38,12 @@ defmodule PyrauiWeb.DocsLive.SliderDocs do
 
           <div class="bg-white p-6 rounded-lg border border-gray-200 mb-4 shadow-sm">
             <div class="max-w-md space-y-6">
-              <Pyraui.Components.Slider.slider label="Temperature (°C)" value={20} min={-10} max={40} />
+              <Pyraui.Components.Slider.slider
+                label="Temperature (°C)"
+                value={20}
+                min={-10}
+                max={40}
+              />
               <Pyraui.Components.Slider.slider
                 label="Price Range ($)"
                 value={500}
@@ -90,7 +95,8 @@ defmodule PyrauiWeb.DocsLive.SliderDocs do
                 label="Value with Helper"
                 value={30}
                 helper="Adjust the slider to set your preferred value"
-              /> <Pyraui.Components.Slider.slider label="Disabled Slider" value={50} disabled={true} />
+              />
+              <Pyraui.Components.Slider.slider label="Disabled Slider" value={50} disabled={true} />
             </div>
           </div>
 

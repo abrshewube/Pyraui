@@ -7,7 +7,9 @@ defmodule PyrauiWeb.DocsLive.SkeletonDocs do
       <div class="space-y-12">
         <header class="space-y-4">
           <h1 class="text-4xl font-bold">Skeleton</h1>
-          <p class="text-lg text-slate-600">Beautiful loading placeholders for content. Use to indicate progress while data fetches.</p>
+          <p class="text-lg text-slate-600">
+            Beautiful loading placeholders for content. Use to indicate progress while data fetches.
+          </p>
         </header>
 
         <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_20px_60px_-50px_rgba(15,23,42,0.35)] space-y-6">
@@ -44,8 +46,18 @@ defmodule PyrauiWeb.DocsLive.SkeletonDocs do
               </div>
             </div>
             <div class="mt-6 flex gap-3">
-              <Pyraui.Components.Skeleton.skeleton variant={:rect} width="96px" height="36px" class="rounded-full" />
-              <Pyraui.Components.Skeleton.skeleton variant={:rect} width="96px" height="36px" class="rounded-full" />
+              <Pyraui.Components.Skeleton.skeleton
+                variant={:rect}
+                width="96px"
+                height="36px"
+                class="rounded-full"
+              />
+              <Pyraui.Components.Skeleton.skeleton
+                variant={:rect}
+                width="96px"
+                height="36px"
+                class="rounded-full"
+              />
             </div>
           </div>
         </section>
@@ -60,7 +72,12 @@ defmodule PyrauiWeb.DocsLive.SkeletonDocs do
                   <Pyraui.Components.Skeleton.skeleton variant={:text} width="40%" />
                   <Pyraui.Components.Skeleton.skeleton variant={:text} width="70%" />
                 </div>
-                <Pyraui.Components.Skeleton.skeleton variant={:rect} width="72px" height="28px" class="rounded-full" />
+                <Pyraui.Components.Skeleton.skeleton
+                  variant={:rect}
+                  width="72px"
+                  height="28px"
+                  class="rounded-full"
+                />
               </div>
             <% end %>
           </div>
@@ -113,16 +130,28 @@ defmodule PyrauiWeb.DocsLive.SkeletonDocs do
             <table class="min-w-full divide-y divide-gray-200 border border-gray-200">
               <thead class="bg-gray-50">
                 <tr>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Prop</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Type</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Default</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">Description</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">
+                    Prop
+                  </th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">
+                    Type
+                  </th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">
+                    Default
+                  </th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase">
+                    Description
+                  </th>
                 </tr>
               </thead>
               <tbody class="bg-white divide-y divide-gray-200">
                 <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">variant</td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">:text | :circle | :rect</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    variant
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                    :text | :circle | :rect
+                  </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">:text</td>
                   <td class="px-6 py-4 text-sm text-gray-700">Skeleton shape variant</td>
                 </tr>
@@ -145,7 +174,9 @@ defmodule PyrauiWeb.DocsLive.SkeletonDocs do
                   <td class="px-6 py-4 text-sm text-gray-700">Custom width (e.g., "200px")</td>
                 </tr>
                 <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">height</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    height
+                  </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">string</td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">nil</td>
                   <td class="px-6 py-4 text-sm text-gray-700">Custom height (e.g., "100px")</td>

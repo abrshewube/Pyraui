@@ -91,15 +91,20 @@ defmodule DocsExtractor do
 
     # Find the actual content between ~H""" and """
     content_start = Enum.find_index(function_lines, &String.contains?(&1, ~s(~H""")))
-    content_end = Enum.find_index(function_lines, fn line ->
-      String.trim(line) == ~s(""")
-    end)
+
+    content_end =
+      Enum.find_index(function_lines, fn line ->
+        String.trim(line) == ~s(""")
+      end)
 
     if content_start && content_end do
-      content_lines = Enum.slice(function_lines, content_start + 1, content_end - content_start - 1)
+      content_lines =
+        Enum.slice(function_lines, content_start + 1, content_end - content_start - 1)
+
       content = Enum.join(content_lines, "\n")
 
-      module_name = name
+      module_name =
+        name
         |> String.split("_")
         |> Enum.map(&String.capitalize/1)
         |> Enum.join("")

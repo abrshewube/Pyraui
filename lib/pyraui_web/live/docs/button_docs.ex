@@ -22,7 +22,9 @@ defmodule PyrauiWeb.DocsLive.ButtonDocs do
               <Pyraui.Components.Button.button variant={:secondary}>
                 Secondary
               </Pyraui.Components.Button.button>
-              <Pyraui.Components.Button.button variant={:ghost}>Ghost</Pyraui.Components.Button.button>
+              <Pyraui.Components.Button.button variant={:ghost}>
+                Ghost
+              </Pyraui.Components.Button.button>
               <Pyraui.Components.Button.button variant={:danger}>
                 Danger
               </Pyraui.Components.Button.button>

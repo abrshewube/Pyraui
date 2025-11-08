@@ -120,7 +120,7 @@ defmodule Pyraui.MixProject do
           "guides/components/modal.md",
           "guides/components/datepicker.md"
         ],
-        "Reference": ["LICENSE"]
+        Reference: ["LICENSE"]
       ]
     ]
   end

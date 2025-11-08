@@ -16,20 +16,32 @@ defmodule PyrauiWeb.DocsLive.FileUploadDocs do
         <section>
           <h2 class="text-2xl font-semibold mb-4 text-gray-900">Basic File Upload</h2>
 
-          <div class="bg-white p-6 rounded-lg border border-gray-200 mb-4 shadow-sm">
-            <div class="text-sm text-gray-600 mb-4">
-              <p>
-                Note: This component requires LiveView upload configuration in your LiveView module.
-              </p>
-            </div>
+          <div class="space-y-6">
+            <Pyraui.Components.FileUpload.file_upload
+              uploads={@uploads.docs_files}
+              label="Upload demo assets"
+              drag_label="Drop files here or click to browse"
+              max_entries={4}
+              class="max-w-4xl rounded-3xl border border-slate-200 bg-white shadow-[0_45px_95px_-60px_rgba(59,130,246,0.25)]"
+            />
 
-            <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center bg-gray-50">
-              <p class="text-gray-500">File upload component preview</p>
-
-              <p class="text-xs text-gray-400 mt-2">
-                Configure uploads in your LiveView to see the full component
-              </p>
-            </div>
+            <%= if @docs_uploaded_files != [] do %>
+              <div class="max-w-4xl rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <h3 class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
+                  Uploaded in this session
+                </h3>
+                <ul class="mt-4 space-y-2 text-sm text-slate-700">
+                  <%= for file <- @docs_uploaded_files do %>
+                    <li class="flex items-center justify-between rounded-xl bg-white px-4 py-3 shadow-sm">
+                      <span class="font-medium truncate">{file.name}</span>
+                      <span class="text-xs text-slate-500">
+                        {Float.round(file.size / 1_048_576, 2)} MB
+                      </span>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
           </div>
 
           <div class="bg-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-200">

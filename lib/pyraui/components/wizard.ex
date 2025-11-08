@@ -19,6 +19,7 @@ defmodule Pyraui.Components.Wizard do
   import PyrauiWeb.CoreComponents
 
   attr :id, :string, required: true, doc: "Unique ID for the wizard"
+
   attr :tone, :atom,
     default: :blue,
     values: [:blue, :indigo, :violet, :emerald, :teal, :rose, :orange, :slate],
@@ -71,7 +72,10 @@ defmodule Pyraui.Components.Wizard do
                 <div class={[
                   "w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-colors",
                   (Map.get(step, :active, false) || Map.get(step, :completed, false)) && "text-white",
-                  if(Map.get(step, :active, false) || Map.get(step, :completed, false), do: @tone.bg, else: "bg-gray-200 text-gray-600")
+                  if(Map.get(step, :active, false) || Map.get(step, :completed, false),
+                    do: @tone.bg,
+                    else: "bg-gray-200 text-gray-600"
+                  )
                 ]}>
                   <%= if Map.get(step, :completed, false) do %>
                     <.icon name="hero-check" class="w-6 h-6" />
@@ -80,13 +84,19 @@ defmodule Pyraui.Components.Wizard do
                   <% end %>
                 </div>
 
-                <span class={["mt-2 text-sm font-medium", Map.get(step, :active, false) && @tone.text || "text-gray-500"]}>
+                <span class={[
+                  "mt-2 text-sm font-medium",
+                  (Map.get(step, :active, false) && @tone.text) || "text-gray-500"
+                ]}>
                   {step.title}
                 </span>
               </div>
 
               <%= if index < @total_steps - 1 do %>
-                <div class={["flex-1 h-0.5 mx-2", Map.get(step, :completed, false) && @tone.bg || "bg-gray-200"]}>
+                <div class={[
+                  "flex-1 h-0.5 mx-2",
+                  (Map.get(step, :completed, false) && @tone.bg) || "bg-gray-200"
+                ]}>
                 </div>
               <% end %>
             <% end %>
@@ -126,7 +136,11 @@ defmodule Pyraui.Components.Wizard do
         </button>
         <button
           type="button"
-          class={["px-4 py-2 text-white rounded-lg font-medium transition-colors", @tone.bg, @tone.hover]}
+          class={[
+            "px-4 py-2 text-white rounded-lg font-medium transition-colors",
+            @tone.bg,
+            @tone.hover
+          ]}
           phx-click="wizard-next"
           phx-value-id={@id}
         >

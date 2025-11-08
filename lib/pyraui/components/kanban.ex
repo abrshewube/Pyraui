@@ -117,6 +117,7 @@ defmodule Pyraui.Components.Kanban do
       |> assign(:card_data, card)
       |> assign(:card_id, card_id)
       |> assign(:column_id, column_id)
+      |> assign(:card_tags, Map.get(card, :tags, []))
 
     ~H"""
     <div
@@ -146,9 +147,14 @@ defmodule Pyraui.Components.Kanban do
 
         <%= if Map.get(@card_data, :tags) do %>
           <div class="flex flex-wrap gap-1 mt-2">
-            <%= for tag <- Map.get(@card_data, :tags, []) do %>
-              <span class="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">
-                {tag}
+            <%= for tag <- @card_tags do %>
+              <span
+                class={[
+                  "px-2 py-1 text-xs font-medium rounded-full",
+                  tag_color_classes(tag)
+                ]}
+              >
+                {tag_label(tag)}
               </span>
             <% end %>
           </div>
@@ -157,4 +163,22 @@ defmodule Pyraui.Components.Kanban do
     </div>
     """
   end
+
+  defp tag_label(tag) when is_map(tag), do: Map.get(tag, :label) || Map.get(tag, "label") || ""
+  defp tag_label(tag), do: to_string(tag || "")
+
+  defp tag_color_classes(tag) when is_map(tag) do
+    case Map.get(tag, :color) || Map.get(tag, "color") do
+      "emerald" -> "bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-200"
+      "indigo" -> "bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200"
+      "purple" -> "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-200"
+      "amber" -> "bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-200"
+      "pink" -> "bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-200"
+      "blue" -> "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200"
+      "neutral" -> "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
+      _ -> "bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-100"
+    end
+  end
+
+  defp tag_color_classes(_tag), do: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200"
 end

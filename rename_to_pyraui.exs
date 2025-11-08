@@ -6,8 +6,8 @@ defmodule RenameScript do
     # Find all .ex and .exs files in lib directory
     files =
       Path.wildcard("lib/**/*.ex") ++
-      Path.wildcard("lib/**/*.exs") ++
-      Path.wildcard("lib/**/*.heex")
+        Path.wildcard("lib/**/*.exs") ++
+        Path.wildcard("lib/**/*.heex")
 
     Enum.each(files, fn file ->
       content = File.read!(file)
@@ -21,8 +21,10 @@ defmodule RenameScript do
         |> String.replace("Ashui.Theme", "Pyraui.Theme")
         |> String.replace("Ashui.MixProject", "Pyraui.MixProject")
         |> String.replace("defmodule Ashui do", "defmodule Pyraui do")
-        |> String.replace(~r/AshUI/, "PyraUI")  # Documentation references
-        |> String.replace(":ashui", ":pyraui")  # Atom references
+        # Documentation references
+        |> String.replace(~r/AshUI/, "PyraUI")
+        # Atom references
+        |> String.replace(":ashui", ":pyraui")
         |> String.replace("@moduledoc \"Ashui", "@moduledoc \"Pyraui")
 
       if content != updated_content do

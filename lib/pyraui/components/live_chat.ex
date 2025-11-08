@@ -46,7 +46,7 @@ defmodule Pyraui.Components.LiveChat do
           {render_slot(@header)}
         </div>
       <% end %>
-
+      
     <!-- Messages Area -->
       <div
         id={"#{@id}-messages"}

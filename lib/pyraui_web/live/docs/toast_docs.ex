@@ -39,7 +39,11 @@ defmodule PyrauiWeb.DocsLive.ToastDocs do
                   Something went wrong
                 </Pyraui.Components.Toast.toast>
 
-                <Pyraui.Components.Toast.toast variant={:info} position={:top_end} id="toast-info-demo">
+                <Pyraui.Components.Toast.toast
+                  variant={:info}
+                  position={:top_end}
+                  id="toast-info-demo"
+                >
                   Information message
                 </Pyraui.Components.Toast.toast>
 
