@@ -121,7 +121,7 @@ defmodule Pyraui.Components.Avatar do
               loading="lazy"
             />
           <% else %>
-            <% case {@initials, @slot?} do %>
+            <%= case {@initials, @slot?} do %>
               <% {initials, _} when not is_nil(initials) -> %>
                 <span class={["font-semibold uppercase tracking-wide drop-shadow", @tokens.text]}>
                   {initials}
