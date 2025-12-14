@@ -14,7 +14,7 @@ defmodule Pyraui.Components.Swap do
 
   attr :id, :string, required: true, doc: "Unique ID for the swap"
   attr :active, :boolean, default: false, doc: "Active state (shows :on slot)"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :on, required: true, doc: "Content to show when active"

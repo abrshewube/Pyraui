@@ -17,7 +17,7 @@ defmodule Pyraui.Components.Hero do
   attr :background, :string, default: nil, doc: "Background image URL"
   attr :size, :atom, default: :md, values: [:sm, :md, :lg], doc: "Hero size"
   attr :centered, :boolean, default: true, doc: "Center align content"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :inner_block, doc: "Custom hero content"

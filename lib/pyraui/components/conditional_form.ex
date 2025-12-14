@@ -18,7 +18,7 @@ defmodule Pyraui.Components.ConditionalForm do
   use Phoenix.Component
 
   attr :id, :string, required: true, doc: "Unique ID for the conditional form"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :field,

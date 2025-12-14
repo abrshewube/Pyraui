@@ -15,7 +15,7 @@ defmodule Pyraui.Components.SkeletonLayout do
     values: [:default, :dashboard, :article, :profile],
     doc: "Layout variant"
 
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def skeleton_layout(assigns) do

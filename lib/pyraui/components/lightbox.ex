@@ -21,7 +21,7 @@ defmodule Pyraui.Components.Lightbox do
 
   attr :current_index, :integer, default: 0, doc: "Currently displayed image index"
   attr :show, :boolean, default: false, doc: "Show lightbox"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def lightbox(assigns) do

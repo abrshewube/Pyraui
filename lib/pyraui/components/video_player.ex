@@ -18,7 +18,7 @@ defmodule Pyraui.Components.VideoPlayer do
   attr :controls, :boolean, default: true, doc: "Show controls"
   attr :width, :string, default: "100%", doc: "Video width"
   attr :height, :string, default: nil, doc: "Video height"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def video_player(assigns) do

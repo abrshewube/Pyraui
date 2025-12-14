@@ -20,7 +20,7 @@ defmodule Pyraui.Components.Stepper do
     values: [:horizontal, :vertical],
     doc: "Layout orientation"
 
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :step, required: true do

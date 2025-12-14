@@ -18,7 +18,7 @@ defmodule Pyraui.Components.SortableList do
   attr :id, :string, required: true, doc: "Unique ID for the sortable list"
   attr :items, :list, required: true, doc: "List of items to display"
   attr :item_id, :atom, default: :id, doc: "Key to use as unique identifier for items"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :item, required: true, doc: "Template for each item"

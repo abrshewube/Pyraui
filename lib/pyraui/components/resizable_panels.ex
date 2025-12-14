@@ -23,7 +23,7 @@ defmodule Pyraui.Components.ResizablePanels do
     values: [:horizontal, :vertical],
     doc: "Layout orientation"
 
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :panel, required: true do

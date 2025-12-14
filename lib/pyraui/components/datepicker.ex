@@ -30,7 +30,7 @@ defmodule Pyraui.Components.DatePicker do
   attr :variant, :atom, default: :soft, values: [:soft, :outline]
   attr :size, :atom, default: :md, values: [:sm, :md, :lg]
   attr :icon, :boolean, default: true
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(autocomplete name id)
 
   def datepicker(assigns) do

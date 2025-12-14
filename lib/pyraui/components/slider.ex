@@ -20,7 +20,7 @@ defmodule Pyraui.Components.Slider do
   attr :helper, :string, default: nil
   attr :disabled, :boolean, default: false
   attr :show_value, :boolean, default: true, doc: "Show current value next to slider"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(autocomplete name id)
 
   def slider(assigns) do

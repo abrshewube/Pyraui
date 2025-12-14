@@ -13,7 +13,7 @@ defmodule Pyraui.Components.Navbar do
   use Phoenix.Component
 
   attr :brand, :string, default: "Brand"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :item,

@@ -25,7 +25,7 @@ defmodule Pyraui.Components.Modal do
   attr :aria_label, :string, default: nil, doc: "ARIA label for the modal"
   attr :aria_labelledby, :string, default: nil, doc: "ID of element that labels the modal"
   attr :aria_describedby, :string, default: nil, doc: "ID of element that describes the modal"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :title

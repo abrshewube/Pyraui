@@ -16,7 +16,7 @@ defmodule Pyraui.Components.SignaturePad do
   attr :line_color, :string, default: "#000000", doc: "Drawing line color"
   attr :line_width, :integer, default: 2, doc: "Drawing line width"
   attr :clear_label, :string, default: "Clear", doc: "Clear button label"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def signature_pad(assigns) do

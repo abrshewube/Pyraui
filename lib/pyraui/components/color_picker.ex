@@ -14,7 +14,7 @@ defmodule Pyraui.Components.ColorPicker do
   attr :value, :string, default: "#000000", doc: "Current color value (hex)"
   attr :show_palette, :boolean, default: false, doc: "Show predefined color palette"
   attr :label, :string, default: nil, doc: "Input label"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def color_picker(assigns) do

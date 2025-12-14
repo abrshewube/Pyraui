@@ -24,7 +24,7 @@ defmodule Pyraui.Components.Skeleton do
   attr :width, :string, default: nil, doc: "Custom width"
   attr :height, :string, default: nil, doc: "Custom height"
   attr :lines, :integer, default: 1, doc: "Number of lines for text variant"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def skeleton(assigns) do

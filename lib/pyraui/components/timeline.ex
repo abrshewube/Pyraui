@@ -22,7 +22,7 @@ defmodule Pyraui.Components.Timeline do
 
   attr :collapsible, :boolean, default: false, doc: "Enable collapsible nested events"
   attr :default_expanded, :boolean, default: true, doc: "Default expanded state for nested events"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :item, doc: "Custom item template"

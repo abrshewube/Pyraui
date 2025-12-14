@@ -27,7 +27,7 @@ defmodule Pyraui.Components.Alert do
   attr :icon, :string, default: nil, doc: "Override the default icon"
   attr :dismissible, :boolean, default: false, doc: "Allow dismissing the alert"
   attr :role, :string, default: "alert", doc: "ARIA role"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :inner_block, doc: "Custom alert content"

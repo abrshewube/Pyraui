@@ -16,7 +16,7 @@ defmodule Pyraui.Components.Gauge do
   attr :variant, :atom, default: :primary, values: [:primary, :success, :warning, :error]
   attr :color, :string, default: nil
   attr :size, :atom, default: :md, values: [:sm, :md, :lg]
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def gauge(assigns) do

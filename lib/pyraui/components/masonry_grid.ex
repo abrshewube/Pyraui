@@ -14,7 +14,7 @@ defmodule Pyraui.Components.MasonryGrid do
   attr :columns, :integer, default: 3, doc: "Number of columns"
   attr :gap, :integer, default: 4, doc: "Gap between items (Tailwind spacing unit)"
   attr :item_height, :string, default: nil, doc: "Fixed item height (optional)"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :item, required: true, doc: "Item template"

@@ -862,59 +862,59 @@ defmodule PyrauiWeb.DocsLive do
 
   defp maybe_assign_badge_card_samples(socket, _section), do: socket
 
-defp maybe_assign_list_samples(socket, "list") do
-  socket
-  |> assign(:list_profiles, list_demo_profiles())
-  |> assign(:list_activity, list_demo_activity())
-end
+  defp maybe_assign_list_samples(socket, "list") do
+    socket
+    |> assign(:list_profiles, list_demo_profiles())
+    |> assign(:list_activity, list_demo_activity())
+  end
 
-defp maybe_assign_list_samples(socket, _section), do: socket
+  defp maybe_assign_list_samples(socket, _section), do: socket
 
-defp maybe_assign_select_samples(socket, "select") do
-  profile_form =
-    %{
-      "country" => "us",
-      "region" => "north_america",
-      "timezone" => "utc-5"
-    }
-    |> to_form(as: :profile)
+  defp maybe_assign_select_samples(socket, "select") do
+    profile_form =
+      %{
+        "country" => "us",
+        "region" => "north_america",
+        "timezone" => "utc-5"
+      }
+      |> to_form(as: :profile)
 
-  filters_form =
-    %{
-      "status" => "active",
-      "owner" => "ava-stone",
-      "timezone" => ""
-    }
-    |> to_form(as: :filters)
+    filters_form =
+      %{
+        "status" => "active",
+        "owner" => "ava-stone",
+        "timezone" => ""
+      }
+      |> to_form(as: :filters)
 
-  socket
-  |> assign(:select_profile_form, profile_form)
-  |> assign(:select_filters_form, filters_form)
-  |> assign(:select_status_options, select_status_options())
-  |> assign(:select_team_members, select_team_members())
-  |> assign(:select_timezone_groups, select_timezone_groups())
-end
+    socket
+    |> assign(:select_profile_form, profile_form)
+    |> assign(:select_filters_form, filters_form)
+    |> assign(:select_status_options, select_status_options())
+    |> assign(:select_team_members, select_team_members())
+    |> assign(:select_timezone_groups, select_timezone_groups())
+  end
 
-defp maybe_assign_select_samples(socket, _section), do: socket
+  defp maybe_assign_select_samples(socket, _section), do: socket
 
-defp maybe_assign_kanban_samples(socket, "kanban") do
-  {columns, metadata} = kanban_demo_data()
+  defp maybe_assign_kanban_samples(socket, "kanban") do
+    {columns, metadata} = kanban_demo_data()
 
-  socket
-  |> assign(:demo_columns, columns)
-  |> assign(:demo_metadata, metadata)
-end
+    socket
+    |> assign(:demo_columns, columns)
+    |> assign(:demo_metadata, metadata)
+  end
 
-defp maybe_assign_kanban_samples(socket, _section), do: socket
+  defp maybe_assign_kanban_samples(socket, _section), do: socket
 
-defp maybe_assign_live_data_table_samples(socket, "live-data-table") do
-  socket
-  |> assign(:demo_rows, live_data_table_rows())
-  |> assign(:demo_columns, live_data_table_columns())
-  |> assign(:demo_filters, live_data_table_filters())
-end
+  defp maybe_assign_live_data_table_samples(socket, "live-data-table") do
+    socket
+    |> assign(:demo_rows, live_data_table_rows())
+    |> assign(:demo_columns, live_data_table_columns())
+    |> assign(:demo_filters, live_data_table_filters())
+  end
 
-defp maybe_assign_live_data_table_samples(socket, _section), do: socket
+  defp maybe_assign_live_data_table_samples(socket, _section), do: socket
 
   defp maybe_assign_connections_samples(socket, "connections-widget") do
     samples = connections_widget_demo_connections()
@@ -926,16 +926,16 @@ defp maybe_assign_live_data_table_samples(socket, _section), do: socket
 
   defp maybe_assign_connections_samples(socket, _section), do: socket
 
-defp maybe_assign_gantt_samples(socket, "gantt") do
-  {tasks, start_date, end_date} = gantt_demo_data()
+  defp maybe_assign_gantt_samples(socket, "gantt") do
+    {tasks, start_date, end_date} = gantt_demo_data()
 
-  socket
-  |> assign(:demo_tasks, tasks)
-  |> assign(:demo_start_date, start_date)
-  |> assign(:demo_end_date, end_date)
-end
+    socket
+    |> assign(:demo_tasks, tasks)
+    |> assign(:demo_start_date, start_date)
+    |> assign(:demo_end_date, end_date)
+  end
 
-defp maybe_assign_gantt_samples(socket, _section), do: socket
+  defp maybe_assign_gantt_samples(socket, _section), do: socket
 
   defp maybe_assign_drawer_samples(socket, "drawer") do
     socket
@@ -1358,368 +1358,368 @@ defp maybe_assign_gantt_samples(socket, _section), do: socket
     }
   end
 
-defp gantt_demo_data do
-  tasks = [
-    %{
-      id: "gantt-task-1",
-      name: "Strategy & Discovery",
-      start_date: ~D[2024-01-02],
-      end_date: ~D[2024-01-08],
-      progress: 100,
-      color: "indigo"
-    },
-    %{
-      id: "gantt-task-2",
-      name: "Experience Design",
-      start_date: ~D[2024-01-09],
-      end_date: ~D[2024-01-15],
-      progress: 65,
-      color: "purple",
-      dependencies: ["gantt-task-1"]
-    },
-    %{
-      id: "gantt-task-3",
-      name: "Implementation Sprint",
-      start_date: ~D[2024-01-16],
-      end_date: ~D[2024-01-28],
-      progress: 40,
-      color: "emerald",
-      dependencies: ["gantt-task-2"]
-    },
-    %{
-      id: "gantt-task-4",
-      name: "QA & Launch Prep",
-      start_date: ~D[2024-01-29],
-      end_date: ~D[2024-02-05],
-      progress: 15,
-      color: "amber",
-      dependencies: ["gantt-task-3"]
-    }
-  ]
-
-  start_date = ~D[2024-01-01]
-  end_date = ~D[2024-02-09]
-
-  {tasks, start_date, end_date}
-end
-
-defp kanban_demo_data do
-  columns = [
-    %{
-      id: "backlog",
-      title: "Backlog",
-      badge: %{label: "6", variant: :neutral},
-      cards: [
-        %{
-          id: "card-101",
-          title: "Research design system usage",
-          description: "Interview 8 designers and audit current UI library.",
-          assignees: demo_user_refs([12, 18]),
-          tags: [%{label: "Research", color: "purple"}],
-          due_date: ~D[2024-01-22],
-          comments_count: 4,
-          attachments_count: 2,
-          progress: 40
-        },
-        %{
-          id: "card-102",
-          title: "Outline migration strategy",
-          description: "Define phased rollout and communication plan.",
-          assignees: demo_user_refs([9]),
-          tags: [%{label: "Planning", color: "blue"}],
-          due_date: ~D[2024-01-25],
-          comments_count: 2,
-          attachments_count: 0
-        }
-      ]
-    },
-    %{
-      id: "in-progress",
-      title: "In Progress",
-      badge: %{label: "4", variant: :primary},
-      cards: [
-        %{
-          id: "card-201",
-          title: "Implement navigation updates",
-          description: "Refine responsive behavior and micro-interactions.",
-          assignees: demo_user_refs([3, 6]),
-          tags: [
-            %{label: "Frontend", color: "emerald"},
-            %{label: "UX", color: "indigo"}
-          ],
-          due_date: ~D[2024-01-18],
-          comments_count: 6,
-          attachments_count: 3,
-          progress: 65
-        },
-        %{
-          id: "card-202",
-          title: "Polish dark theme states",
-          description: "Adjust contrast and state transitions for dark mode.",
-          assignees: demo_user_refs([6]),
-          tags: [%{label: "Design", color: "pink"}],
-          due_date: ~D[2024-01-20],
-          comments_count: 3,
-          attachments_count: 1,
-          progress: 20
-        }
-      ]
-    },
-    %{
-      id: "review",
-      title: "Review",
-      badge: %{label: "2", variant: :warning},
-      cards: [
-        %{
-          id: "card-301",
-          title: "Accessibility audit",
-          description: "Validate focus states, contrast, and semantics.",
-          assignees: demo_user_refs([2, 19]),
-          tags: [
-            %{label: "QA", color: "amber"},
-            %{label: "Accessibility", color: "emerald"}
-          ],
-          due_date: ~D[2024-01-17],
-          comments_count: 8,
-          attachments_count: 4,
-          progress: 80
-        }
-      ]
-    },
-    %{
-      id: "done",
-      title: "Done",
-      badge: %{label: "9", variant: :success},
-      cards: [
-        %{
-          id: "card-401",
-          title: "Launch design tokens v2",
-          description: "Ship core palette and spacing refresh.",
-          assignees: demo_user_refs([1, 7]),
-          tags: [
-            %{label: "Launch", color: "emerald"},
-            %{label: "Design", color: "purple"}
-          ],
-          completed_at: ~N[2024-01-12 15:30:00],
-          comments_count: 5,
-          attachments_count: 2,
-          progress: 100
-        }
-      ]
-    }
-  ]
-
-  metadata = %{
-    users: kanban_demo_users(),
-    tags: [
-      %{label: "Research", color: "purple"},
-      %{label: "Planning", color: "blue"},
-      %{label: "Frontend", color: "emerald"},
-      %{label: "UX", color: "indigo"},
-      %{label: "Design", color: "pink"},
-      %{label: "QA", color: "amber"},
-      %{label: "Accessibility", color: "emerald"},
-      %{label: "Launch", color: "emerald"}
+  defp gantt_demo_data do
+    tasks = [
+      %{
+        id: "gantt-task-1",
+        name: "Strategy & Discovery",
+        start_date: ~D[2024-01-02],
+        end_date: ~D[2024-01-08],
+        progress: 100,
+        color: "indigo"
+      },
+      %{
+        id: "gantt-task-2",
+        name: "Experience Design",
+        start_date: ~D[2024-01-09],
+        end_date: ~D[2024-01-15],
+        progress: 65,
+        color: "purple",
+        dependencies: ["gantt-task-1"]
+      },
+      %{
+        id: "gantt-task-3",
+        name: "Implementation Sprint",
+        start_date: ~D[2024-01-16],
+        end_date: ~D[2024-01-28],
+        progress: 40,
+        color: "emerald",
+        dependencies: ["gantt-task-2"]
+      },
+      %{
+        id: "gantt-task-4",
+        name: "QA & Launch Prep",
+        start_date: ~D[2024-01-29],
+        end_date: ~D[2024-02-05],
+        progress: 15,
+        color: "amber",
+        dependencies: ["gantt-task-3"]
+      }
     ]
-  }
 
-  {columns, metadata}
-end
+    start_date = ~D[2024-01-01]
+    end_date = ~D[2024-02-09]
 
-defp demo_user_refs(ids) do
-  Enum.map(ids, fn id ->
-    %{id: id, avatar: "https://i.pravatar.cc/60?img=#{id}"}
-  end)
-end
+    {tasks, start_date, end_date}
+  end
 
-defp kanban_demo_users do
-  Enum.map(1..20, fn id ->
-    %{
-      id: id,
-      name: "Member #{id}",
-      avatar: "https://i.pravatar.cc/80?img=#{id}"
-    }
-  end)
-end
+  defp kanban_demo_data do
+    columns = [
+      %{
+        id: "backlog",
+        title: "Backlog",
+        badge: %{label: "6", variant: :neutral},
+        cards: [
+          %{
+            id: "card-101",
+            title: "Research design system usage",
+            description: "Interview 8 designers and audit current UI library.",
+            assignees: demo_user_refs([12, 18]),
+            tags: [%{label: "Research", color: "purple"}],
+            due_date: ~D[2024-01-22],
+            comments_count: 4,
+            attachments_count: 2,
+            progress: 40
+          },
+          %{
+            id: "card-102",
+            title: "Outline migration strategy",
+            description: "Define phased rollout and communication plan.",
+            assignees: demo_user_refs([9]),
+            tags: [%{label: "Planning", color: "blue"}],
+            due_date: ~D[2024-01-25],
+            comments_count: 2,
+            attachments_count: 0
+          }
+        ]
+      },
+      %{
+        id: "in-progress",
+        title: "In Progress",
+        badge: %{label: "4", variant: :primary},
+        cards: [
+          %{
+            id: "card-201",
+            title: "Implement navigation updates",
+            description: "Refine responsive behavior and micro-interactions.",
+            assignees: demo_user_refs([3, 6]),
+            tags: [
+              %{label: "Frontend", color: "emerald"},
+              %{label: "UX", color: "indigo"}
+            ],
+            due_date: ~D[2024-01-18],
+            comments_count: 6,
+            attachments_count: 3,
+            progress: 65
+          },
+          %{
+            id: "card-202",
+            title: "Polish dark theme states",
+            description: "Adjust contrast and state transitions for dark mode.",
+            assignees: demo_user_refs([6]),
+            tags: [%{label: "Design", color: "pink"}],
+            due_date: ~D[2024-01-20],
+            comments_count: 3,
+            attachments_count: 1,
+            progress: 20
+          }
+        ]
+      },
+      %{
+        id: "review",
+        title: "Review",
+        badge: %{label: "2", variant: :warning},
+        cards: [
+          %{
+            id: "card-301",
+            title: "Accessibility audit",
+            description: "Validate focus states, contrast, and semantics.",
+            assignees: demo_user_refs([2, 19]),
+            tags: [
+              %{label: "QA", color: "amber"},
+              %{label: "Accessibility", color: "emerald"}
+            ],
+            due_date: ~D[2024-01-17],
+            comments_count: 8,
+            attachments_count: 4,
+            progress: 80
+          }
+        ]
+      },
+      %{
+        id: "done",
+        title: "Done",
+        badge: %{label: "9", variant: :success},
+        cards: [
+          %{
+            id: "card-401",
+            title: "Launch design tokens v2",
+            description: "Ship core palette and spacing refresh.",
+            assignees: demo_user_refs([1, 7]),
+            tags: [
+              %{label: "Launch", color: "emerald"},
+              %{label: "Design", color: "purple"}
+            ],
+            completed_at: ~N[2024-01-12 15:30:00],
+            comments_count: 5,
+            attachments_count: 2,
+            progress: 100
+          }
+        ]
+      }
+    ]
 
-defp list_demo_profiles do
-  [
-    %{
-      name: "Ava Stone",
-      title: "Product Design Lead",
-      team: "Design Systems",
-      location: "San Francisco, USA",
-      avatar: "https://i.pravatar.cc/96?img=32",
-      availability: "In Focus",
-      focus: "Heads down until 2 PM",
-      tags: ["Design Systems", "Figma Libraries"]
-    },
-    %{
-      name: "Mateo García",
-      title: "Senior Frontend Engineer",
-      team: "Experience Platform",
-      location: "Barcelona, Spain",
-      avatar: "https://i.pravatar.cc/96?img=58",
-      availability: "Reviewing PRs",
-      focus: "Responding within 10 min",
-      tags: ["Phoenix LiveView", "Accessibility"]
-    },
-    %{
-      name: "Priya Patel",
-      title: "Product Manager",
-      team: "Growth Experiments",
-      location: "Toronto, Canada",
-      avatar: "https://i.pravatar.cc/96?img=47",
-      availability: "Available",
-      focus: "Open for syncs this afternoon",
-      tags: ["Roadmapping", "Cross-functional"]
-    }
-  ]
-end
-
-defp live_data_table_columns do
-  [
-    %{id: :id, label: "ID", width: "w-20", sortable: true},
-    %{id: :company, label: "Company", sortable: true, grow: true},
-    %{id: :owner, label: "Owner", sortable: true},
-    %{id: :status, label: "Status"},
-    %{id: :progress, label: "Progress"},
-    %{id: :updated_at, label: "Last Updated", sortable: true}
-  ]
-end
-
-defp live_data_table_rows do
-  [
-    %{
-      id: "row-1001",
-      company: %{name: "Astral Systems", industry: "Aerospace"},
-      owner: %{name: "Ava Stone", avatar: "https://i.pravatar.cc/64?img=21"},
-      status: :in_progress,
-      progress: 72,
-      updated_at: "15 min ago",
-      tags: ["Mission Control", "Gov"],
-      score: 82
-    },
-    %{
-      id: "row-1002",
-      company: %{name: "Nimbus Labs", industry: "Climate Tech"},
-      owner: %{name: "Mateo García", avatar: "https://i.pravatar.cc/64?img=36"},
-      status: :at_risk,
-      progress: 38,
-      updated_at: "42 min ago",
-      tags: ["Energy", "Expansion"],
-      score: 64
-    },
-    %{
-      id: "row-1003",
-      company: %{name: "Lumen AI", industry: "ML Ops"},
-      owner: %{name: "Priya Patel", avatar: "https://i.pravatar.cc/64?img=48"},
-      status: :won,
-      progress: 100,
-      updated_at: "Today, 9:05 AM",
-      tags: ["Enterprise", "AI"],
-      score: 95
-    },
-    %{
-      id: "row-1004",
-      company: %{name: "Harborwave", industry: "Logistics"},
-      owner: %{name: "Noah Hill", avatar: "https://i.pravatar.cc/64?img=14"},
-      status: :contracting,
-      progress: 58,
-      updated_at: "Yesterday",
-      tags: ["Supply Chain"],
-      score: 71
-    }
-  ]
-end
-
-defp live_data_table_filters do
-  %{
-    status: [
-      %{label: "In Progress", id: :in_progress},
-      %{label: "Contracting", id: :contracting},
-      %{label: "At Risk", id: :at_risk},
-      %{label: "Won", id: :won}
-    ],
-    industries: ~w(Aerospace Climate Tech ML Ops Logistics Energy Enterprise Supply Chain)
-  }
-end
-
-defp list_demo_activity do
-  [
-    %{
-      id: "activity-1",
-      label: "Design Review",
-      description: "Navigation polish shipped to staging",
-      timestamp: "6 minutes ago",
-      status: :in_progress,
-      icon: "hero-sparkles"
-    },
-    %{
-      id: "activity-2",
-      label: "Content Strategy",
-      description: "Long-form onboarding draft ready for feedback",
-      timestamp: "42 minutes ago",
-      status: :review,
-      icon: "hero-document-text"
-    },
-    %{
-      id: "activity-3",
-      label: "Dependencies",
-      description: "Payments integration cleared for launch",
-      timestamp: "Today, 9:15 AM",
-      status: :done,
-      icon: "hero-check-badge"
-    }
-  ]
-end
-
-defp select_status_options do
-  [
-    %{value: "active", label: "Active"},
-    %{value: "paused", label: "Paused"},
-    %{value: "at-risk", label: "At Risk"},
-    %{value: "completed", label: "Completed"}
-  ]
-end
-
-defp select_team_members do
-  [
-    %{value: "ava-stone", label: "Ava Stone"},
-    %{value: "mateo-garcia", label: "Mateo García"},
-    %{value: "priya-patel", label: "Priya Patel"},
-    %{value: "noah-hill", label: "Noah Hill"}
-  ]
-end
-
-defp select_timezone_groups do
-  [
-    %{
-      label: "Americas",
-      options: [
-        %{value: "utc-8", label: "Pacific (UTC−08:00)"},
-        %{value: "utc-7", label: "Mountain (UTC−07:00)"},
-        %{value: "utc-5", label: "Eastern (UTC−05:00)"}
-      ]
-    },
-    %{
-      label: "Europe",
-      options: [
-        %{value: "utc+0", label: "Greenwich Mean Time (UTC±00:00)"},
-        %{value: "utc+1", label: "Central European (UTC+01:00)"},
-        %{value: "utc+2", label: "Eastern European (UTC+02:00)"}
-      ]
-    },
-    %{
-      label: "Asia-Pacific",
-      options: [
-        %{value: "utc+5_5", label: "India (UTC+05:30)"},
-        %{value: "utc+8", label: "Singapore (UTC+08:00)"},
-        %{value: "utc+10", label: "Sydney (UTC+10:00)"}
+    metadata = %{
+      users: kanban_demo_users(),
+      tags: [
+        %{label: "Research", color: "purple"},
+        %{label: "Planning", color: "blue"},
+        %{label: "Frontend", color: "emerald"},
+        %{label: "UX", color: "indigo"},
+        %{label: "Design", color: "pink"},
+        %{label: "QA", color: "amber"},
+        %{label: "Accessibility", color: "emerald"},
+        %{label: "Launch", color: "emerald"}
       ]
     }
-  ]
-end
+
+    {columns, metadata}
+  end
+
+  defp demo_user_refs(ids) do
+    Enum.map(ids, fn id ->
+      %{id: id, avatar: "https://i.pravatar.cc/60?img=#{id}"}
+    end)
+  end
+
+  defp kanban_demo_users do
+    Enum.map(1..20, fn id ->
+      %{
+        id: id,
+        name: "Member #{id}",
+        avatar: "https://i.pravatar.cc/80?img=#{id}"
+      }
+    end)
+  end
+
+  defp list_demo_profiles do
+    [
+      %{
+        name: "Ava Stone",
+        title: "Product Design Lead",
+        team: "Design Systems",
+        location: "San Francisco, USA",
+        avatar: "https://i.pravatar.cc/96?img=32",
+        availability: "In Focus",
+        focus: "Heads down until 2 PM",
+        tags: ["Design Systems", "Figma Libraries"]
+      },
+      %{
+        name: "Mateo García",
+        title: "Senior Frontend Engineer",
+        team: "Experience Platform",
+        location: "Barcelona, Spain",
+        avatar: "https://i.pravatar.cc/96?img=58",
+        availability: "Reviewing PRs",
+        focus: "Responding within 10 min",
+        tags: ["Phoenix LiveView", "Accessibility"]
+      },
+      %{
+        name: "Priya Patel",
+        title: "Product Manager",
+        team: "Growth Experiments",
+        location: "Toronto, Canada",
+        avatar: "https://i.pravatar.cc/96?img=47",
+        availability: "Available",
+        focus: "Open for syncs this afternoon",
+        tags: ["Roadmapping", "Cross-functional"]
+      }
+    ]
+  end
+
+  defp live_data_table_columns do
+    [
+      %{id: :id, label: "ID", width: "w-20", sortable: true},
+      %{id: :company, label: "Company", sortable: true, grow: true},
+      %{id: :owner, label: "Owner", sortable: true},
+      %{id: :status, label: "Status"},
+      %{id: :progress, label: "Progress"},
+      %{id: :updated_at, label: "Last Updated", sortable: true}
+    ]
+  end
+
+  defp live_data_table_rows do
+    [
+      %{
+        id: "row-1001",
+        company: %{name: "Astral Systems", industry: "Aerospace"},
+        owner: %{name: "Ava Stone", avatar: "https://i.pravatar.cc/64?img=21"},
+        status: :in_progress,
+        progress: 72,
+        updated_at: "15 min ago",
+        tags: ["Mission Control", "Gov"],
+        score: 82
+      },
+      %{
+        id: "row-1002",
+        company: %{name: "Nimbus Labs", industry: "Climate Tech"},
+        owner: %{name: "Mateo García", avatar: "https://i.pravatar.cc/64?img=36"},
+        status: :at_risk,
+        progress: 38,
+        updated_at: "42 min ago",
+        tags: ["Energy", "Expansion"],
+        score: 64
+      },
+      %{
+        id: "row-1003",
+        company: %{name: "Lumen AI", industry: "ML Ops"},
+        owner: %{name: "Priya Patel", avatar: "https://i.pravatar.cc/64?img=48"},
+        status: :won,
+        progress: 100,
+        updated_at: "Today, 9:05 AM",
+        tags: ["Enterprise", "AI"],
+        score: 95
+      },
+      %{
+        id: "row-1004",
+        company: %{name: "Harborwave", industry: "Logistics"},
+        owner: %{name: "Noah Hill", avatar: "https://i.pravatar.cc/64?img=14"},
+        status: :contracting,
+        progress: 58,
+        updated_at: "Yesterday",
+        tags: ["Supply Chain"],
+        score: 71
+      }
+    ]
+  end
+
+  defp live_data_table_filters do
+    %{
+      status: [
+        %{label: "In Progress", id: :in_progress},
+        %{label: "Contracting", id: :contracting},
+        %{label: "At Risk", id: :at_risk},
+        %{label: "Won", id: :won}
+      ],
+      industries: ~w(Aerospace Climate Tech ML Ops Logistics Energy Enterprise Supply Chain)
+    }
+  end
+
+  defp list_demo_activity do
+    [
+      %{
+        id: "activity-1",
+        label: "Design Review",
+        description: "Navigation polish shipped to staging",
+        timestamp: "6 minutes ago",
+        status: :in_progress,
+        icon: "hero-sparkles"
+      },
+      %{
+        id: "activity-2",
+        label: "Content Strategy",
+        description: "Long-form onboarding draft ready for feedback",
+        timestamp: "42 minutes ago",
+        status: :review,
+        icon: "hero-document-text"
+      },
+      %{
+        id: "activity-3",
+        label: "Dependencies",
+        description: "Payments integration cleared for launch",
+        timestamp: "Today, 9:15 AM",
+        status: :done,
+        icon: "hero-check-badge"
+      }
+    ]
+  end
+
+  defp select_status_options do
+    [
+      %{value: "active", label: "Active"},
+      %{value: "paused", label: "Paused"},
+      %{value: "at-risk", label: "At Risk"},
+      %{value: "completed", label: "Completed"}
+    ]
+  end
+
+  defp select_team_members do
+    [
+      %{value: "ava-stone", label: "Ava Stone"},
+      %{value: "mateo-garcia", label: "Mateo García"},
+      %{value: "priya-patel", label: "Priya Patel"},
+      %{value: "noah-hill", label: "Noah Hill"}
+    ]
+  end
+
+  defp select_timezone_groups do
+    [
+      %{
+        label: "Americas",
+        options: [
+          %{value: "utc-8", label: "Pacific (UTC−08:00)"},
+          %{value: "utc-7", label: "Mountain (UTC−07:00)"},
+          %{value: "utc-5", label: "Eastern (UTC−05:00)"}
+        ]
+      },
+      %{
+        label: "Europe",
+        options: [
+          %{value: "utc+0", label: "Greenwich Mean Time (UTC±00:00)"},
+          %{value: "utc+1", label: "Central European (UTC+01:00)"},
+          %{value: "utc+2", label: "Eastern European (UTC+02:00)"}
+        ]
+      },
+      %{
+        label: "Asia-Pacific",
+        options: [
+          %{value: "utc+5_5", label: "India (UTC+05:30)"},
+          %{value: "utc+8", label: "Singapore (UTC+08:00)"},
+          %{value: "utc+10", label: "Sydney (UTC+10:00)"}
+        ]
+      }
+    ]
+  end
 
   defp countdown_future_date do
     DateTime.utc_now()

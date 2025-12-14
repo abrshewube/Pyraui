@@ -13,7 +13,7 @@ defmodule Pyraui.Components.Tabs do
   use Phoenix.Component
 
   attr :id, :string, default: "tabs"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :tab,

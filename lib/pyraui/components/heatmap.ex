@@ -14,7 +14,7 @@ defmodule Pyraui.Components.Heatmap do
   attr :color_scheme, :atom, default: :blue, values: [:blue, :green, :red, :purple]
   attr :start_date, :string, default: nil
   attr :end_date, :string, default: nil
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def heatmap(assigns) do

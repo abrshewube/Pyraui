@@ -21,7 +21,7 @@ defmodule Pyraui.Components.Autocomplete do
   attr :helper, :string, default: nil
   attr :required, :boolean, default: false
   attr :disabled, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def autocomplete(assigns) do

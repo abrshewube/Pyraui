@@ -24,7 +24,7 @@ defmodule Pyraui.Components.MultiSelect do
   attr :helper, :string, default: nil
   attr :required, :boolean, default: false
   attr :disabled, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(name id)
 
   def multi_select(assigns) do

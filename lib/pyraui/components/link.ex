@@ -21,7 +21,7 @@ defmodule Pyraui.Components.Link do
     doc: "Link variant"
 
   attr :external, :boolean, default: false, doc: "External link (opens in new tab)"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :inner_block, required: true

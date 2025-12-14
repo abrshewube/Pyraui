@@ -29,7 +29,7 @@ defmodule Pyraui.Components.Gantt do
   attr :allow_drag, :boolean, default: true, doc: "Allow dragging tasks to change dates"
   attr :allow_resize, :boolean, default: true, doc: "Allow resizing tasks"
   attr :show_dependencies, :boolean, default: true, doc: "Show dependency lines between tasks"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :task_label, doc: "Custom task label template"

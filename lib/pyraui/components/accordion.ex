@@ -16,7 +16,7 @@ defmodule Pyraui.Components.Accordion do
 
   use Phoenix.Component
 
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :item,
@@ -36,9 +36,7 @@ defmodule Pyraui.Components.Accordion do
         class="group rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
         open={Map.get(item, :open, false)}
       >
-        <summary
-          class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left marker:content-none"
-        >
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left marker:content-none">
           <span class="text-sm font-semibold text-slate-900">{item.title}</span>
           <svg
             class="h-5 w-5 text-slate-400 transition-transform duration-200 group-open:rotate-180"

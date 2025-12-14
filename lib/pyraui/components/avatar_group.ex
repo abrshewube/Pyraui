@@ -15,7 +15,7 @@ defmodule Pyraui.Components.AvatarGroup do
   attr :size, :atom, default: :md, values: [:sm, :md, :lg], doc: "Avatar size"
   attr :stack, :boolean, default: true, doc: "Stack avatars with negative margin"
   attr :show_online_status, :boolean, default: true, doc: "Show online status indicator"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def avatar_group(assigns) do

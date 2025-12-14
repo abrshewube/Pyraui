@@ -22,7 +22,7 @@ defmodule Pyraui.Components.Rating do
   attr :helper, :string, default: nil
   attr :readonly, :boolean, default: false
   attr :disabled, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(name id)
 
   def rating(assigns) do

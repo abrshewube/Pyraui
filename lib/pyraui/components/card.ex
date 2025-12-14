@@ -21,7 +21,7 @@ defmodule Pyraui.Components.Card do
   attr :variant, :atom, default: :solid, values: [:solid, :soft, :glass, :outline]
   attr :tone, :atom, default: :neutral, values: [:neutral, :sky, :violet, :emerald, :amber, :rose]
   attr :hoverable, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :inner_block, required: true

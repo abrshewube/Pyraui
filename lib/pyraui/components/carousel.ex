@@ -23,7 +23,7 @@ defmodule Pyraui.Components.Carousel do
   attr :interval, :integer, default: 5000, doc: "Autoplay interval in milliseconds"
   attr :show_indicators, :boolean, default: true, doc: "Show slide indicators"
   attr :show_arrows, :boolean, default: true, doc: "Show navigation arrows"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
   attr :current_slide, :integer, default: 0, doc: "Index of the active slide"
 

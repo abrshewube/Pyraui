@@ -15,7 +15,7 @@ defmodule Pyraui.Components.Diff do
   attr :left_label, :string, default: "Before", doc: "Label for left side"
   attr :right_label, :string, default: "After", doc: "Label for right side"
   attr :type, :atom, default: :text, values: [:text, :code], doc: "Content type"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def diff(assigns) do
