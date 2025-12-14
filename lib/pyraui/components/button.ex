@@ -26,7 +26,7 @@ defmodule Pyraui.Components.Button do
   attr :href, :string, default: nil
 
   attr :rest, :global,
-    include: ~w(onclick phx-click phx-target target rel download data-method data-confirm)
+    include: ~w(onclick phx-click phx-target target rel download data-method data-confirm name value)
 
   slot :inner_block, required: true
 
