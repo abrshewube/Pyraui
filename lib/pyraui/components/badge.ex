@@ -20,7 +20,7 @@ defmodule Pyraui.Components.Badge do
   attr :tone, :atom, default: :solid, values: [:solid, :soft, :outline]
   attr :pill, :boolean, default: true
   attr :icon, :string, default: nil
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :inner_block, required: true

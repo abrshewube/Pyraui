@@ -106,14 +106,15 @@ defmodule PyrauiWeb.DocsLive.SelectDocs do
           <div class="bg-white p-6 md:p-8 rounded-2xl border border-gray-200 shadow-sm max-w-4xl">
             <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
               <div>
-                <p class="text-xs uppercase tracking-widest text-blue-500 font-semibold">Active Pipeline</p>
+                <p class="text-xs uppercase tracking-widest text-blue-500 font-semibold">
+                  Active Pipeline
+                </p>
                 <h3 class="text-xl font-semibold text-gray-900">17 opportunities this quarter</h3>
               </div>
 
               <div class="flex items-center gap-3 text-sm text-gray-500">
                 <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 font-medium text-emerald-600">
-                  <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Live
+                  <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Live
                 </span>
                 Updated moments ago
               </div>
@@ -212,7 +213,8 @@ defmodule PyrauiWeb.DocsLive.SelectDocs do
             </li>
             <li>
               <span class="font-medium text-gray-900">Group related choices:</span>
-              Use <code class="px-1 rounded bg-gray-100">optgroup</code> for regions, teams, or contexts so long menus stay scannable.
+              Use <code class="px-1 rounded bg-gray-100">optgroup</code>
+              for regions, teams, or contexts so long menus stay scannable.
             </li>
             <li>
               <span class="font-medium text-gray-900">Micro-interactions:</span>

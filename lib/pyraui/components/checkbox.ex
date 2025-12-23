@@ -16,7 +16,7 @@ defmodule Pyraui.Components.Checkbox do
   attr :checked, :boolean, default: false
   attr :disabled, :boolean, default: false
   attr :required, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(name id)
 
   def checkbox(assigns) do

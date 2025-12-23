@@ -15,7 +15,7 @@ attr :type, :string, default: "date", values: ["date", "time", "datetime-local"]
 attr :variant, :atom, default: :soft, values: [:soft, :outline]
 attr :size, :atom, default: :md, values: [:sm, :md, :lg]
 attr :icon, :boolean, default: true
-attr :icon_class, :string, default: ""
+attr :icon_class, :any, default: ""
 attr :min, :string
 attr :max, :string
 attr :disabled, :boolean, default: false

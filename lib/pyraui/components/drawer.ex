@@ -22,7 +22,7 @@ defmodule Pyraui.Components.Drawer do
   attr :open, :boolean, default: false, doc: "Open state"
   attr :side, :atom, default: :left, values: [:left, :right], doc: "Drawer side"
   attr :overlay, :boolean, default: true, doc: "Show overlay backdrop"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :trigger, doc: "Trigger button/content"

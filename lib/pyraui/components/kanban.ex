@@ -18,7 +18,7 @@ defmodule Pyraui.Components.Kanban do
   attr :allow_column_add, :boolean, default: false, doc: "Allow adding new columns"
   attr :card_add_label, :string, default: "Add card", doc: "Label for add card button"
   attr :column_add_label, :string, default: "Add column", doc: "Label for add column button"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :card, doc: "Custom card template"
@@ -148,12 +148,10 @@ defmodule Pyraui.Components.Kanban do
         <%= if Map.get(@card_data, :tags) do %>
           <div class="flex flex-wrap gap-1 mt-2">
             <%= for tag <- @card_tags do %>
-              <span
-                class={[
-                  "px-2 py-1 text-xs font-medium rounded-full",
-                  tag_color_classes(tag)
-                ]}
-              >
+              <span class={[
+                "px-2 py-1 text-xs font-medium rounded-full",
+                tag_color_classes(tag)
+              ]}>
                 {tag_label(tag)}
               </span>
             <% end %>
@@ -180,5 +178,6 @@ defmodule Pyraui.Components.Kanban do
     end
   end
 
-  defp tag_color_classes(_tag), do: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200"
+  defp tag_color_classes(_tag),
+    do: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200"
 end

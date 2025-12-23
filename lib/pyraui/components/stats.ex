@@ -16,7 +16,7 @@ defmodule Pyraui.Components.Stats do
     default: true,
     doc: "Layout stats horizontally (default) or vertically"
 
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :stat, required: true do

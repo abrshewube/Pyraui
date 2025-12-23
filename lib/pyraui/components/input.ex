@@ -20,7 +20,7 @@ defmodule Pyraui.Components.Input do
   attr :value, :string, default: nil
   attr :disabled, :boolean, default: false
   attr :required, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(autocomplete name id maxlength minlength pattern readonly size)
 
   def input(assigns) do

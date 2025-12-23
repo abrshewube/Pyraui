@@ -15,7 +15,7 @@ defmodule Pyraui.Components.Avatar do
   attr :name, :string, default: nil, doc: "Name for placeholder avatar (displays initials)"
   attr :size, :atom, default: :md, values: [:xs, :sm, :md, :lg, :xl], doc: "Avatar size"
   attr :online, :boolean, default: nil, doc: "Show online status indicator (true/false/nil)"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :inner_block

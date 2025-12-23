@@ -18,7 +18,7 @@ defmodule Pyraui.Components.Countdown do
 
   attr :format, :atom, default: :compact, values: [:compact, :detailed], doc: "Display format"
   attr :on_complete, :string, default: nil, doc: "Event to dispatch when countdown completes"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def countdown(assigns) do

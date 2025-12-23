@@ -18,7 +18,9 @@ defmodule PyrauiWeb.DocsLive.VideoPlayerDocs do
 
           <div class="grid gap-6 lg:grid-cols-2">
             <div class="bg-white dark:bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Standard player</h3>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                Standard player
+              </h3>
               <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
                 A responsive 16:9 player with poster art and native controls.
               </p>
@@ -34,7 +36,9 @@ defmodule PyrauiWeb.DocsLive.VideoPlayerDocs do
             </div>
 
             <div class="bg-white dark:bg-gray-900 p-6 md:p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Autoplay teaser</h3>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                Autoplay teaser
+              </h3>
               <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
                 Autoplays silently, loops in the background, and shows inline metadata.
               </p>
@@ -53,12 +57,13 @@ defmodule PyrauiWeb.DocsLive.VideoPlayerDocs do
 
                 <div class="flex items-start justify-between gap-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900 dark:text-gray-100">Inside the Studio</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
+                      Inside the Studio
+                    </p>
                     <p class="text-xs text-gray-500 dark:text-gray-400">2 min · Behind the scenes</p>
                   </div>
                   <span class="inline-flex items-center gap-2 rounded-full bg-blue-50 dark:bg-blue-900/30 px-3 py-1 text-xs font-semibold text-blue-600 dark:text-blue-300">
-                    <span class="size-2 rounded-full bg-blue-400 animate-pulse"></span>
-                    Auto preview
+                    <span class="size-2 rounded-full bg-blue-400 animate-pulse"></span> Auto preview
                   </span>
                 </div>
               </div>
@@ -99,12 +104,12 @@ defmodule PyrauiWeb.DocsLive.VideoPlayerDocs do
               class="h-full w-full object-cover opacity-70"
             />
 
-            <div class="absolute inset-0 bg-gradient-to-tr from-gray-900 via-transparent to-gray-900/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-gray-900 via-transparent to-gray-900/40">
+            </div>
 
             <div class="relative z-10 px-6 md:px-12 py-16 md:py-24 max-w-3xl space-y-6">
               <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest">
-                <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Featured Story
+                <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span> Featured Story
               </span>
               <h3 class="text-3xl md:text-4xl font-semibold leading-tight">
                 Orbital Prototype: How the crew iterates at escape velocity
@@ -114,12 +119,10 @@ defmodule PyrauiWeb.DocsLive.VideoPlayerDocs do
               </p>
               <div class="flex flex-wrap items-center gap-4 text-sm text-gray-200/80">
                 <span class="inline-flex items-center gap-2">
-                  <.icon name="hero-clock" class="size-4" />
-                  08:24 runtime
+                  <.icon name="hero-clock" class="size-4" /> 08:24 runtime
                 </span>
                 <span class="inline-flex items-center gap-2">
-                  <.icon name="hero-user-group" class="size-4" />
-                  Directed by The Atlas Team
+                  <.icon name="hero-user-group" class="size-4" /> Directed by The Atlas Team
                 </span>
               </div>
             </div>
@@ -152,7 +155,9 @@ defmodule PyrauiWeb.DocsLive.VideoPlayerDocs do
 
               <div class="space-y-4">
                 <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 p-4 space-y-3">
-                  <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Upcoming drops</h4>
+                  <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                    Upcoming drops
+                  </h4>
 
                   <div class="space-y-3">
                     <button
@@ -174,7 +179,9 @@ defmodule PyrauiWeb.DocsLive.VideoPlayerDocs do
                 </div>
 
                 <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4">
-                  <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Download assets</h4>
+                  <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                    Download assets
+                  </h4>
                   <ul class="space-y-2 text-xs text-gray-500 dark:text-gray-400">
                     <li class="flex items-center justify-between rounded-lg border border-dashed border-gray-200 dark:border-gray-800 px-3 py-2">
                       Storyboard.pdf

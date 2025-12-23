@@ -38,7 +38,7 @@ defmodule Pyraui.Components.Toast do
     default: 5000,
     doc: "Auto-dismiss duration in milliseconds (0 to disable)"
 
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :inner_block, required: true

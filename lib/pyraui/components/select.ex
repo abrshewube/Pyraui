@@ -18,7 +18,7 @@ defmodule Pyraui.Components.Select do
   attr :error, :string, default: nil
   attr :disabled, :boolean, default: false
   attr :required, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(name id multiple)
   slot :inner_block, required: true
 

@@ -16,7 +16,7 @@ defmodule Pyraui.Components.Radio do
   attr :checked, :boolean, default: false
   attr :disabled, :boolean, default: false
   attr :required, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(id)
 
   def radio(assigns) do

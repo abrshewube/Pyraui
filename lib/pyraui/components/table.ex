@@ -22,7 +22,7 @@ defmodule Pyraui.Components.Table do
   attr :rounded, :boolean, default: true
   attr :caption, :string, default: nil
   attr :empty_label, :string, default: "No data available"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :col,

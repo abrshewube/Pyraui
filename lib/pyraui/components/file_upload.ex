@@ -25,7 +25,7 @@ defmodule Pyraui.Components.FileUpload do
 
   attr :label, :string, default: "Choose files"
   attr :drag_label, :string, default: "Drag and drop files here or click to browse"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def file_upload(assigns) do

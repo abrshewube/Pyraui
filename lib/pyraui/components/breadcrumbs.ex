@@ -13,7 +13,7 @@ defmodule Pyraui.Components.Breadcrumbs do
 
   use Phoenix.Component
 
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :item,

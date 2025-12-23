@@ -17,7 +17,7 @@ defmodule Pyraui.Components.Mockup do
   attr :type, :atom, required: true, values: [:phone, :browser, :window], doc: "Mockup type"
   attr :url, :string, default: nil, doc: "URL for browser mockup"
   attr :title, :string, default: nil, doc: "Title for window mockup"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :inner_block, required: true

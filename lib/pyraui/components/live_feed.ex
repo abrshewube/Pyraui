@@ -14,7 +14,7 @@ defmodule Pyraui.Components.LiveFeed do
   attr :empty_message, :string, default: "No updates yet"
   attr :auto_scroll, :boolean, default: true, doc: "Automatically scroll to new items"
   attr :max_height, :string, default: "400px", doc: "Maximum height of the feed"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :item, doc: "Custom item template"

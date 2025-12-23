@@ -18,7 +18,7 @@ defmodule Pyraui.Components.PasswordStrengthMeter do
   attr :value, :string, default: "", doc: "Current password value"
   attr :show_suggestions, :boolean, default: true, doc: "Show password strength suggestions"
   attr :min_length, :integer, default: 8, doc: "Minimum password length"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def password_strength_meter(assigns) do

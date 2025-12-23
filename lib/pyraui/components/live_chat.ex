@@ -17,7 +17,7 @@ defmodule Pyraui.Components.LiveChat do
   attr :typing_users, :list, default: [], doc: "List of users currently typing"
   attr :placeholder, :string, default: "Type a message..."
   attr :disabled, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :message, doc: "Custom message template"

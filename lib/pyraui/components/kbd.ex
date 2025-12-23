@@ -11,7 +11,7 @@ defmodule Pyraui.Components.Kbd do
   use Phoenix.Component
 
   attr :size, :atom, default: :md, values: [:sm, :md, :lg], doc: "Key size"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :inner_block, required: true

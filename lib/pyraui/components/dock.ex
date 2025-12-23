@@ -15,7 +15,7 @@ defmodule Pyraui.Components.Dock do
   import PyrauiWeb.CoreComponents
 
   attr :id, :string, required: true, doc: "Unique ID for the dock"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :position, :atom, default: :fixed, values: [:fixed, :inline]
   attr :rest, :global
 

@@ -16,7 +16,7 @@ defmodule Pyraui.Components.AnimatedChart do
   attr :height, :integer, default: 300, doc: "Chart height"
   attr :colors, :list, default: nil, doc: "Custom colors"
   attr :duration, :integer, default: 1000, doc: "Animation duration in milliseconds"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def animated_chart(assigns) do

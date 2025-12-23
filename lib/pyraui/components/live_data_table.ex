@@ -35,7 +35,7 @@ defmodule Pyraui.Components.LiveDataTable do
   attr :enable_selection, :boolean, default: false, doc: "Enable row selection"
   attr :selected_rows, :list, default: [], doc: "List of selected row IDs"
   attr :empty_message, :string, default: "No data available", doc: "Message to show when no rows"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :header, doc: "Custom header row template"

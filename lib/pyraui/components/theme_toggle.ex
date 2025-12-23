@@ -23,7 +23,7 @@ defmodule Pyraui.Components.ThemeSwitch do
 
   attr :icon_style, :atom, default: :dual, values: [:dual, :minimal, :emoji], doc: "Icon style"
   attr :hint, :string, default: nil, doc: "Optional helper text beneath the toggle"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def theme_switch(assigns) do

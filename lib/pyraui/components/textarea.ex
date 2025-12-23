@@ -19,7 +19,7 @@ defmodule Pyraui.Components.Textarea do
   attr :rows, :integer, default: 4
   attr :disabled, :boolean, default: false
   attr :required, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(name id maxlength minlength pattern readonly)
 
   def textarea(assigns) do

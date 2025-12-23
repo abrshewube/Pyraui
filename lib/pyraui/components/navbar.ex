@@ -13,7 +13,7 @@ defmodule Pyraui.Components.Navbar do
   use Phoenix.Component
 
   attr :brand, :string, default: "Brand"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :item,
@@ -30,7 +30,7 @@ defmodule Pyraui.Components.Navbar do
     rest = Map.delete(rest, :class)
 
     navbar_class =
-      ["bg-white shadow-sm border-b border-gray-200", assigns.class]
+      ["bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200", assigns.class]
       |> Enum.reject(&(&1 in [nil, ""]))
       |> Enum.join(" ")
 

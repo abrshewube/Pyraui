@@ -20,13 +20,13 @@ defmodule Pyraui.Components.Button do
   attr :disabled, :boolean, default: false
   attr :loading, :boolean, default: false
   attr :type, :string, default: "button"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :navigate, :any, default: nil
   attr :patch, :any, default: nil
   attr :href, :string, default: nil
 
   attr :rest, :global,
-    include: ~w(onclick phx-click phx-target target rel download data-method data-confirm)
+    include: ~w(onclick phx-click phx-target target rel download data-method data-confirm name value)
 
   slot :inner_block, required: true
 

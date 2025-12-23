@@ -17,7 +17,7 @@ defmodule Pyraui.Components.TagInput do
   attr :placeholder, :string, default: "Add a tag...", doc: "Input placeholder"
   attr :max_tags, :integer, default: nil, doc: "Maximum number of tags allowed"
   attr :allow_duplicates, :boolean, default: false, doc: "Allow duplicate tags"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def tag_input(assigns) do

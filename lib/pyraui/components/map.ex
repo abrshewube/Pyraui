@@ -22,7 +22,7 @@ defmodule Pyraui.Components.Map do
 
   attr :width, :string, default: "100%"
   attr :height, :string, default: "400px"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def map(assigns) do

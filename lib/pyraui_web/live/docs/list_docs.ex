@@ -97,8 +97,7 @@ defmodule PyrauiWeb.DocsLive.ListDocs do
                     type="button"
                     class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600 transition-all"
                   >
-                    <.icon name="hero-chat-bubble-left-right" class="size-4" />
-                    Sync
+                    <.icon name="hero-chat-bubble-left-right" class="size-4" /> Sync
                   </button>
                 </div>
               </:item>
@@ -164,12 +163,10 @@ defmodule PyrauiWeb.DocsLive.ListDocs do
             <PyrauiWeb.CoreComponents.list>
               <:item :for={activity <- @list_activity} title={activity.label}>
                 <div class="flex items-start gap-4">
-                  <span
-                    class={[
-                      "inline-flex items-center justify-center rounded-xl p-3",
-                      activity_badge_class(activity.status)
-                    ]}
-                  >
+                  <span class={[
+                    "inline-flex items-center justify-center rounded-xl p-3",
+                    activity_badge_class(activity.status)
+                  ]}>
                     <.icon name={activity.icon} class="size-5" />
                   </span>
 
@@ -183,8 +180,7 @@ defmodule PyrauiWeb.DocsLive.ListDocs do
                       </div>
 
                       <span class="inline-flex items-center gap-1 font-medium text-gray-500">
-                        <.icon name="hero-arrow-top-right-on-square" class="size-3" />
-                        View thread
+                        <.icon name="hero-arrow-top-right-on-square" class="size-3" /> View thread
                       </span>
                     </div>
                   </div>

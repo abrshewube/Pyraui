@@ -14,7 +14,7 @@ defmodule Pyraui.Components.Progress do
   attr :max, :integer, default: 100
   attr :variant, :atom, default: :primary, values: [:primary, :success, :warning, :error]
   attr :show_label, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def progress(assigns) do

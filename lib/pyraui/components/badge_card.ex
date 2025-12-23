@@ -30,7 +30,7 @@ defmodule Pyraui.Components.BadgeCard do
 
   attr :points, :integer, default: nil, doc: "Points awarded for this badge"
   attr :unlocked_at, :any, default: nil, doc: "Date when badge was unlocked"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def badge_card(assigns) do

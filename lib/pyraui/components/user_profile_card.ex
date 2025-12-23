@@ -21,7 +21,7 @@ defmodule Pyraui.Components.UserProfileCard do
   attr :role, :string, default: nil, doc: "User's role or title"
   attr :bio, :string, default: nil, doc: "User's bio or description"
   attr :actions, :list, default: [], doc: "List of action buttons"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def user_profile_card(assigns) do

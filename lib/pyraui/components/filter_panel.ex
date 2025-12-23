@@ -24,7 +24,7 @@ defmodule Pyraui.Components.FilterPanel do
   attr :title, :string, default: "Filters", doc: "Panel title"
   attr :collapsible, :boolean, default: true, doc: "Allow collapsing the panel"
   attr :collapsed, :boolean, default: false, doc: "Initial collapsed state"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :filter, required: true do

@@ -28,7 +28,7 @@ defmodule Pyraui.Components.Chart do
   attr :fill_opacity, :float, default: 0.3, doc: "Fill opacity for area charts"
   attr :corner_radius, :integer, default: 4, doc: "Corner radius for bars"
   attr :title, :string, default: nil
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   def chart(assigns) do

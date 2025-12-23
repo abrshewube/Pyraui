@@ -23,7 +23,7 @@ defmodule Pyraui.Components.ConnectionsWidget do
 
   attr :max_display, :integer, default: 10, doc: "Maximum number of connections to display"
   attr :show_count, :boolean, default: true, doc: "Show total count"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :action, doc: "Custom action button"

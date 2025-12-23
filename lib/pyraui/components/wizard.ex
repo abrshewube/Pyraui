@@ -27,7 +27,7 @@ defmodule Pyraui.Components.Wizard do
 
   attr :compact, :boolean, default: false, doc: "Use compact spacing"
   attr :show_progress, :boolean, default: true, doc: "Show the top progress indicator"
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
 
   slot :step, required: true do

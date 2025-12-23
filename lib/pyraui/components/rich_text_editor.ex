@@ -25,7 +25,7 @@ defmodule Pyraui.Components.RichTextEditor do
   attr :helper, :string, default: nil
   attr :required, :boolean, default: false
   attr :disabled, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global, include: ~w(name id)
 
   def rich_text_editor(assigns) do

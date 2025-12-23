@@ -12,7 +12,7 @@ defmodule Pyraui.Components.Label do
 
   attr :for, :string, required: true
   attr :required, :boolean, default: false
-  attr :class, :string, default: ""
+  attr :class, :any, default: nil
   attr :rest, :global
   slot :inner_block, required: true
 
